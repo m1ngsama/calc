@@ -10,7 +10,9 @@ import { CanadaIncomeTaxForm } from "@/components/calculator/CanadaIncomeTaxForm
 import { Card } from "@/components/ui/Card";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
+import { RelatedCalculators } from "@/components/calculator/RelatedCalculators";
 import { alternateLanguages } from "@/lib/seo";
+import { getCalculatorLabels } from "@/lib/calculator-labels";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -105,6 +107,14 @@ export default async function IncomeTaxPage({
           <p>{t("lastVerified", { date: taxData.lastVerified })}</p>
         </div>
       </Card>
+
+      <RelatedCalculators
+        locale={locale}
+        countryId={countryId}
+        currentCalc="income-tax"
+        calculators={country.calculators}
+        labels={getCalculatorLabels(tcalc)}
+      />
     </div>
   );
 }

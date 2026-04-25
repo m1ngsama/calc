@@ -6,7 +6,9 @@ import { MortgageForm } from "@/components/calculator/MortgageForm";
 import { Card } from "@/components/ui/Card";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
+import { RelatedCalculators } from "@/components/calculator/RelatedCalculators";
 import { alternateLanguages } from "@/lib/seo";
+import { getCalculatorLabels } from "@/lib/calculator-labels";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -47,6 +49,7 @@ export default async function MortgagePage({
 
   const countryName = tc(countryId);
   const tcalc = await getTranslations({ locale, namespace: "calculator" });
+  const calcLabels = getCalculatorLabels(tcalc);
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
@@ -54,7 +57,7 @@ export default async function MortgagePage({
         items={[
           { label: "CalcHub", href: `/${locale}` },
           { label: countryName, href: `/${locale}/${countryId}` },
-          { label: tcalc("mortgage"), href: `/${locale}/${countryId}/mortgage` },
+          { label: calcLabels["mortgage"], href: `/${locale}/${countryId}/mortgage` },
         ]}
       />
       <JsonLd
@@ -92,6 +95,14 @@ export default async function MortgagePage({
           <p>{t("lastVerified", { date: "2026-04-25" })}</p>
         </div>
       </Card>
+
+      <RelatedCalculators
+        locale={locale}
+        countryId={countryId}
+        currentCalc="mortgage"
+        calculators={country.calculators}
+        labels={calcLabels}
+      />
     </div>
   );
 }

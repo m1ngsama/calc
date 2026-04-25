@@ -10,7 +10,9 @@ import { CanadaSalaryForm } from "@/components/calculator/CanadaSalaryForm";
 import { Card } from "@/components/ui/Card";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
+import { RelatedCalculators } from "@/components/calculator/RelatedCalculators";
 import { alternateLanguages } from "@/lib/seo";
+import { getCalculatorLabels } from "@/lib/calculator-labels";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -106,6 +108,14 @@ export default async function SalaryPage({
           <p>{t("lastVerified", { date: taxData.lastVerified })}</p>
         </div>
       </Card>
+
+      <RelatedCalculators
+        locale={locale}
+        countryId={countryId}
+        currentCalc="salary"
+        calculators={country.calculators}
+        labels={getCalculatorLabels(tcalc)}
+      />
     </div>
   );
 }

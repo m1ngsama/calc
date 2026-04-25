@@ -132,6 +132,53 @@
       "lastVerified": "Last verified: {date}"
     }
   },
+  "brazil": {
+    "incomeTax": {
+      "title": "Brazil Income Tax Calculator {year}",
+      "description": "Calculate your Brazilian income tax (IRPF), INSS social security contributions, and take-home pay based on official Receita Federal rates.",
+      "monthlyIncome": "Monthly Gross Income",
+      "dependents": "Number of Dependents",
+      "calculate": "Calculate Tax",
+      "results": "Tax Breakdown",
+      "takeHomePay": "Take-Home Pay",
+      "perMonth": "per month",
+      "perYear": "per year",
+      "incomeTax": "Income Tax (IRPF)",
+      "inss": "Social Security (INSS)",
+      "effectiveRate": "Effective Tax Rate",
+      "howItWorks": "How Brazil Income Tax Works",
+      "howItWorksContent": "Brazil uses a progressive monthly income tax system (IRPF) with rates from 0% to 27.5%. INSS social security contributions are deducted first, then dependent deductions (R$189.59/month per dependent) before income tax is calculated.\n\nINSS contributions are also progressive with 4 tiers from 7.5% to 14%, with a salary ceiling of R$8,157.41/month. Each tier applies only to income within that band.\n\nThe tax year runs from January to December. Most employees have taxes withheld monthly by employers. Annual returns (Declaração de Ajuste Anual) are filed between March and May of the following year.",
+      "dataSource": "Data source: Receita Federal do Brasil",
+      "lastVerified": "Last verified: {date}"
+    },
+    "salary": {
+      "howItWorksContent": "Brazilian salaries (CLT regime) are subject to INSS social security contributions and IRPF income tax, both withheld monthly by the employer.\n\nINSS is calculated progressively across 4 tiers (7.5% to 14%), with a ceiling of R$8,157.41. The maximum monthly INSS contribution is approximately R$908.86.\n\nAfter INSS deduction, income tax (IRPF) is calculated on the remaining base with rates from 7.5% to 27.5%. Employees also receive a 13th salary (décimo terceiro) paid in two installments in November and December."
+    },
+    "vat": {
+      "howItWorksContent": "Brazil has a complex multi-tax consumption system. The main tax visible to consumers is ICMS (state tax), with São Paulo's standard rate at 18%. Essential goods like food and medicine are taxed at reduced rates of 7-12%.\n\nAdditional federal taxes include PIS and COFINS (combined 3.65-9.25% depending on regime). Services are taxed by ISS (municipal) at 2-5%.\n\nBrazil is transitioning to a unified VAT system (IBS/CBS) under the 2023 tax reform. The new system will fully replace ICMS, ISS, PIS, and COFINS by 2033."
+    },
+    "pension": {
+      "title": "Brazil Pension Calculator {year}",
+      "description": "Estimate your future INSS retirement pension based on your contribution history and the 2019 reform rules.",
+      "monthlyIncome": "Current Monthly Gross Income",
+      "gender": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "contributedYears": "Years Already Contributed",
+      "currentAge": "Current Age",
+      "calculate": "Estimate Pension",
+      "results": "Pension Estimate",
+      "monthlyBenefit": "Estimated Monthly Pension",
+      "benefitRate": "Benefit Rate (Alíquota)",
+      "averageSalary": "Average Contribution Salary",
+      "contributionYearsTotal": "Total Contribution Years at Retirement",
+      "retirementAge": "Minimum Retirement Age",
+      "monthlyContribution": "Current Monthly INSS Contribution",
+      "howItWorksContent": "Brazil's public pension (INSS/RGPS) was reformed in 2019. The benefit is calculated as a percentage of the average of all contributions since July 1994.\n\nThe base rate is 60% of the average salary for 20 years of contributions (men) or 15 years (women), plus 2 percentage points for each additional year. Reaching 100% requires 40 years (men) or 35 years (women).\n\nMinimum retirement age is 65 (men) / 62 (women). The minimum pension equals the minimum wage (R$1,518/month) and the maximum is R$7,786.02/month.",
+      "dataSource": "Data source: {source}",
+      "lastVerified": "Last verified: {date}"
+    }
+  },
   "salary": {
     "title": "{country} Salary Calculator {year}",
     "description": "Calculate your take-home salary after taxes and social insurance deductions.",

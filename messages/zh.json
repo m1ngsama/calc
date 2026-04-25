@@ -132,6 +132,53 @@
       "lastVerified": "最后验证：{date}"
     }
   },
+  "brazil": {
+    "incomeTax": {
+      "title": "巴西个人所得税计算器 {year}",
+      "description": "根据巴西联邦税务局官方税率，计算您的个人所得税（IRPF）、社会保险（INSS）和到手收入。",
+      "monthlyIncome": "月收入（税前）",
+      "dependents": "抚养人数",
+      "calculate": "计算税额",
+      "results": "税额明细",
+      "takeHomePay": "到手收入",
+      "perMonth": "每月",
+      "perYear": "每年",
+      "incomeTax": "个人所得税（IRPF）",
+      "inss": "社会保险（INSS）",
+      "effectiveRate": "实际税率",
+      "howItWorks": "巴西所得税制度详解",
+      "howItWorksContent": "巴西采用按月累进所得税制度（IRPF），税率从0%到27.5%。INSS社会保险缴费先行扣除，然后扣除抚养人减免（每人每月R$189.59），再计算所得税。\n\nINSS缴费也是累进制，分4档从7.5%到14%，工资上限为R$8,157.41/月。每档仅对该区间内的收入征收。\n\n纳税年度为1月至12月。大多数雇员由雇主每月代扣税款。年度申报（Declaração de Ajuste Anual）在次年3月至5月之间提交。",
+      "dataSource": "数据来源：巴西联邦税务局（Receita Federal）",
+      "lastVerified": "最后验证：{date}"
+    },
+    "salary": {
+      "howItWorksContent": "巴西CLT制度下的工资需缴纳INSS社会保险和IRPF所得税，均由雇主每月代扣。\n\nINSS按4档累进计算（7.5%至14%），上限为R$8,157.41。最高月缴费约R$908.86。\n\nINSS扣除后，按剩余基数计算所得税（IRPF），税率从7.5%到27.5%。雇员还享有第13薪（décimo terceiro），分别在11月和12月分两次发放。"
+    },
+    "vat": {
+      "howItWorksContent": "巴西拥有复杂的多税种消费税体系。消费者最常接触的是ICMS（州税），圣保罗州标准税率为18%。食品和药品等必需品适用7-12%的优惠税率。\n\n联邦层面还有PIS和COFINS（合计3.65-9.25%）。服务业征收ISS（市税），税率2-5%。\n\n巴西正根据2023年税改过渡到统一增值税制度（IBS/CBS）。新制度将在2033年前完全取代ICMS、ISS、PIS和COFINS。"
+    },
+    "pension": {
+      "title": "巴西养老金计算器 {year}",
+      "description": "根据您的缴费历史和2019年改革规则，估算未来的INSS退休金。",
+      "monthlyIncome": "当前月收入（税前）",
+      "gender": "性别",
+      "male": "男",
+      "female": "女",
+      "contributedYears": "已缴纳年数",
+      "currentAge": "当前年龄",
+      "calculate": "估算养老金",
+      "results": "养老金估算结果",
+      "monthlyBenefit": "预计月养老金",
+      "benefitRate": "领取比例（Alíquota）",
+      "averageSalary": "平均缴费工资",
+      "contributionYearsTotal": "退休时总缴费年数",
+      "retirementAge": "最低退休年龄",
+      "monthlyContribution": "当前每月INSS缴费",
+      "howItWorksContent": "巴西公共养老金（INSS/RGPS）在2019年进行了改革。养老金按1994年7月以来所有缴费的平均值的一定比例计算。\n\n基准比例为平均工资的60%（男性需缴费20年，女性15年），每多缴一年增加2个百分点。达到100%需要40年（男性）或35年（女性）。\n\n最低退休年龄为65岁（男性）/ 62岁（女性）。最低养老金等于最低工资（R$1,518/月），最高为R$7,786.02/月。",
+      "dataSource": "数据来源：{source}",
+      "lastVerified": "最后验证：{date}"
+    }
+  },
   "salary": {
     "title": "{country} 工资计算器 {year}",
     "description": "计算扣除税费和社会保险后的实际到手工资。",

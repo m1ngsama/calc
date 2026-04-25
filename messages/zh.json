@@ -19,7 +19,16 @@
     "pickCountry": "选择一个国家开始",
     "popularCalculators": "热门计算器",
     "calculatorCount": "{count} 个计算器",
-    "financialCalculators": "金融计算器"
+    "financialCalculators": "金融计算器",
+    "faq": "常见问题",
+    "faqQ1": "这些计算器免费吗？",
+    "faqA1": "是的，CalcHub 的所有计算器完全免费使用，无需注册。",
+    "faqQ2": "计算结果准确吗？",
+    "faqA2": "我们使用 2026 年最新的官方政府税率和公式。所有计算在浏览器中运行，即时获得结果。",
+    "faqQ3": "支持哪些国家？",
+    "faqA3": "CalcHub 目前支持日本、德国、巴西、印度和加拿大，提供个人所得税、工资、房贷、增值税、养老金和货币换算计算器。",
+    "faqQ4": "我的数据安全吗？",
+    "faqA4": "完全安全。所有计算都在您的浏览器中完成，不会向任何服务器发送数据。"
   },
   "country": {
     "japan": "日本",

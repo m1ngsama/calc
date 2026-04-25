@@ -19,7 +19,16 @@
     "pickCountry": "Choose a country to get started",
     "popularCalculators": "Popular Calculators",
     "calculatorCount": "{count} calculators",
-    "financialCalculators": "Financial Calculators"
+    "financialCalculators": "Financial Calculators",
+    "faq": "Frequently Asked Questions",
+    "faqQ1": "Are these calculators free?",
+    "faqA1": "Yes, all CalcHub calculators are completely free to use. No registration required.",
+    "faqQ2": "How accurate are the calculations?",
+    "faqA2": "We use official government tax rates and formulas updated for 2026. All calculations run in your browser for instant results.",
+    "faqQ3": "Which countries are supported?",
+    "faqA3": "CalcHub currently supports Japan, Germany, Brazil, India, and Canada with income tax, salary, mortgage, VAT, pension, and currency calculators.",
+    "faqQ4": "Is my data private?",
+    "faqA4": "Absolutely. All calculations run entirely in your browser. No data is sent to any server."
   },
   "country": {
     "japan": "Japan",

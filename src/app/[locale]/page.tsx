@@ -65,6 +65,17 @@ export default async function HomePage({
           inLanguage: locale === "zh" ? "zh-CN" : "en",
         }}
       />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [1, 2, 3, 4].map((i) => ({
+            "@type": "Question",
+            name: t(`faqQ${i}`),
+            acceptedAnswer: { "@type": "Answer", text: t(`faqA${i}`) },
+          })),
+        }}
+      />
       <h1 className="text-3xl font-bold text-(--color-navy) mb-2">
         {t("title")}
       </h1>
@@ -112,6 +123,27 @@ export default async function HomePage({
           </Link>
         ))}
       </div>
+
+      <section className="mt-16">
+        <h2 className="text-lg font-semibold text-(--color-text) mb-6">
+          {t("faq")}
+        </h2>
+        <div className="space-y-4">
+          {[1, 2, 3, 4].map((i) => (
+            <details
+              key={i}
+              className="group border border-(--color-border) rounded-lg bg-(--color-surface)"
+            >
+              <summary className="cursor-pointer p-4 font-medium text-(--color-text) select-none">
+                {t(`faqQ${i}`)}
+              </summary>
+              <p className="px-4 pb-4 text-sm text-(--color-text-muted)">
+                {t(`faqA${i}`)}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,0 +1,14 @@
+{
+  "taxYear": 2025,
+  "currency": "BRL",
+  "minimumPension": 1518.00,
+  "maximumPension": 7786.02,
+  "contributionCeiling": 8157.41,
+  "retirementAge": { "men": 65, "women": 62 },
+  "minimumContributionYears": { "men": 20, "women": 15 },
+  "baseAliquota": 0.60,
+  "additionalPerYear": 0.02,
+  "fullBenefitYears": { "men": 40, "women": 35 },
+  "source": "https://www.gov.br/previdencia",
+  "lastVerified": "2026-04-25"
+}

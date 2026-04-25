@@ -1,0 +1,24 @@
+{
+  "taxYear": 2025,
+  "currency": "BRL",
+  "monthlyBrackets": [
+    { "min": 0, "max": 2259.20, "rate": 0, "deduction": 0 },
+    { "min": 2259.21, "max": 2826.65, "rate": 0.075, "deduction": 169.44 },
+    { "min": 2826.66, "max": 3751.05, "rate": 0.15, "deduction": 381.44 },
+    { "min": 3751.06, "max": 4664.68, "rate": 0.225, "deduction": 662.77 },
+    { "min": 4664.69, "max": null, "rate": 0.275, "deduction": 896.00 }
+  ],
+  "dependentDeductionMonthly": 189.59,
+  "socialInsurance": {
+    "type": "progressive",
+    "brackets": [
+      { "min": 0, "max": 1518.00, "rate": 0.075 },
+      { "min": 1518.01, "max": 2793.88, "rate": 0.09 },
+      { "min": 2793.89, "max": 4190.83, "rate": 0.12 },
+      { "min": 4190.84, "max": 8157.41, "rate": 0.14 }
+    ],
+    "ceiling": 8157.41
+  },
+  "source": "https://www.gov.br/receitafederal",
+  "lastVerified": "2026-04-25"
+}

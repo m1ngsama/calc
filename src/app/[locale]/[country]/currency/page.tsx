@@ -1,0 +1,76 @@
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { countries, countryIds } from "@/lib/countries";
+import { routing } from "@/i18n/routing";
+import { CurrencyForm } from "@/components/calculator/CurrencyForm";
+import { Card } from "@/components/ui/Card";
+import type { Metadata } from "next";
+
+export function generateStaticParams() {
+  return routing.locales.flatMap((locale) =>
+    countryIds
+      .filter((c) => countries[c].calculators.includes("currency"))
+      .map((country) => ({ locale, country }))
+  );
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; country: string }>;
+}): Promise<Metadata> {
+  const { locale, country: countryId } = await params;
+  const country = countries[countryId];
+  const tc = await getTranslations({ locale, namespace: "country" });
+  const countryName = tc(countryId);
+  const currencyCode = country?.currency ?? "";
+  return {
+    title: `${countryName} Currency Converter 2026 | ${currencyCode} Exchange Rates`,
+    description: `Convert ${currencyCode} to and from major world currencies using live exchange rates. Free currency converter for ${countryName}.`,
+  };
+}
+
+export default async function CurrencyPage({
+  params,
+}: {
+  params: Promise<{ locale: string; country: string }>;
+}) {
+  const { locale, country: countryId } = await params;
+  const country = countries[countryId];
+  if (!country || !country.calculators.includes("currency")) notFound();
+
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "currency" });
+  const tc = await getTranslations({ locale, namespace: "country" });
+
+  return (
+    <div className="max-w-3xl mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold text-(--color-navy) mb-2">
+        {t("title", { country: tc(countryId), year: 2026 })}
+      </h1>
+      <p className="text-(--color-text-muted) mb-8">
+        {t("description", { currencyCode: country.currency })}
+      </p>
+
+      <CurrencyForm defaultCurrency={country.currency} />
+
+      <Card className="mt-8">
+        <h2 className="text-lg font-semibold text-(--color-text) mb-3">
+          {t("howItWorks")}
+        </h2>
+        <div className="prose prose-sm text-(--color-text-muted) max-w-none">
+          {t("howItWorksContent")
+            .split("\n\n")
+            .map((p: string, i: number) => (
+              <p key={i}>{p}</p>
+            ))}
+        </div>
+        <div className="mt-4 pt-4 border-t border-(--color-border) text-xs text-(--color-text-muted)">
+          <p>{t("dataSource")}</p>
+          <p>{t("lastVerified")}</p>
+        </div>
+      </Card>
+    </div>
+  );
+}

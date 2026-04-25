@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "siteName": "CalcHub",
+    "siteDescription": "Free, accurate financial calculators for every country. All calculations run in your browser."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "selectCountry": "Select Country",
+    "selectLanguage": "Language"
+  },
+  "home": {
+    "title": "Financial Calculators by Country",
+    "subtitle": "Accurate, free, and private. All calculations run in your browser.",
+    "pickCountry": "Choose a country to get started",
+    "popularCalculators": "Popular Calculators"
+  },
+  "country": {
+    "japan": "Japan",
+    "germany": "Germany",
+    "brazil": "Brazil",
+    "india": "India",
+    "canada": "Canada"
+  },
+  "calculator": {
+    "incometax": "Income Tax Calculator",
+    "salary": "Salary Calculator",
+    "mortgage": "Mortgage Calculator",
+    "vat": "VAT Calculator",
+    "pension": "Pension Calculator",
+    "currency": "Currency Converter"
+  },
+  "japan": {
+    "incomeTax": {
+      "title": "Japan Income Tax Calculator {year}",
+      "description": "Calculate your Japanese income tax (所得税), residence tax (住民税), and social insurance contributions based on official NTA tax brackets.",
+      "annualIncome": "Annual Income (Gross)",
+      "filingStatus": "Filing Status",
+      "single": "Single",
+      "married": "Married",
+      "dependents": "Number of Dependents",
+      "calculate": "Calculate Tax",
+      "results": "Tax Breakdown",
+      "takeHomePay": "Take-Home Pay",
+      "perMonth": "per month",
+      "perYear": "per year",
+      "incomeTax": "Income Tax (所得税)",
+      "residenceTax": "Residence Tax (住民税)",
+      "socialInsurance": "Social Insurance",
+      "healthInsurance": "Health Insurance",
+      "pension": "Pension (厚生年金)",
+      "employmentInsurance": "Employment Insurance",
+      "effectiveRate": "Effective Tax Rate",
+      "howItWorks": "How Japan Income Tax Works",
+      "howItWorksContent": "Japan uses a progressive income tax system with rates ranging from 5% to 45%. In addition to national income tax, residents pay a flat 10% residence tax (住民税) to their local municipality. Social insurance contributions including health insurance, pension, and employment insurance are deducted from gross salary before income tax is calculated.\n\nThe tax year in Japan runs from January 1 to December 31. Most employees have taxes withheld by their employer through the year-end adjustment (年末調整) process. Self-employed individuals must file a final tax return (確定申告) by March 15 of the following year.\n\nKey deductions include the basic deduction (基礎控除) of ¥480,000, employment income deduction (給与所得控除) which varies by income level, and spouse and dependent deductions.",
+      "dataSource": "Data source: National Tax Agency (国税庁)",
+      "lastVerified": "Last verified: {date}"
+    }
+  },
+  "footer": {
+    "disclaimer": "This calculator provides estimates based on published tax rates. Consult a tax professional for precise calculations.",
+    "dataSources": "Data Sources",
+    "privacy": "All calculations run locally in your browser. No data is sent to any server."
+  }
+}

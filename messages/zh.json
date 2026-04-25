@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "siteName": "CalcHub",
+    "siteDescription": "免费、精确的各国金融计算器。所有计算在浏览器中完成。"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "selectCountry": "选择国家",
+    "selectLanguage": "语言"
+  },
+  "home": {
+    "title": "各国金融计算器",
+    "subtitle": "精确、免费、保护隐私。所有计算在浏览器中完成。",
+    "pickCountry": "选择一个国家开始",
+    "popularCalculators": "热门计算器"
+  },
+  "country": {
+    "japan": "日本",
+    "germany": "德国",
+    "brazil": "巴西",
+    "india": "印度",
+    "canada": "加拿大"
+  },
+  "calculator": {
+    "incometax": "个人所得税计算器",
+    "salary": "工资计算器",
+    "mortgage": "房贷计算器",
+    "vat": "增值税计算器",
+    "pension": "养老金计算器",
+    "currency": "汇率换算"
+  },
+  "japan": {
+    "incomeTax": {
+      "title": "日本个人所得税计算器 {year}",
+      "description": "根据日本国税庁官方税率，计算您的所得税、住民税和社会保险费。",
+      "annualIncome": "年收入（税前）",
+      "filingStatus": "申报状态",
+      "single": "单身",
+      "married": "已婚",
+      "dependents": "抚养人数",
+      "calculate": "计算税额",
+      "results": "税额明细",
+      "takeHomePay": "到手收入",
+      "perMonth": "每月",
+      "perYear": "每年",
+      "incomeTax": "所得税",
+      "residenceTax": "住民税",
+      "socialInsurance": "社会保险",
+      "healthInsurance": "健康保险",
+      "pension": "厚生年金",
+      "employmentInsurance": "雇佣保险",
+      "effectiveRate": "实际税率",
+      "howItWorks": "日本所得税制度详解",
+      "howItWorksContent": "日本采用累进所得税制度，税率从5%到45%不等。除国税外，居民还需向当地市区町村缴纳约10%的住民税。社会保险包括健康保险、厚生年金和雇佣保险，在计算所得税前从总收入中扣除。\n\n日本的纳税年度为1月1日至12月31日。大多数雇员通过年末调整（年末調整）由雇主代扣税款。个体经营者须在次年3月15日前提交确定申告。\n\n主要扣除项目包括：基础扣除（基礎控除）48万日元、工资所得扣除（给与所得控除，按收入水平变化）、配偶扣除和抚养扣除等。",
+      "dataSource": "数据来源：日本国税庁",
+      "lastVerified": "最后验证：{date}"
+    }
+  },
+  "footer": {
+    "disclaimer": "本计算器基于公开税率提供估算结果，精确计算请咨询税务专业人士。",
+    "dataSources": "数据来源",
+    "privacy": "所有计算在本地浏览器中完成，不会向任何服务器发送数据。"
+  }
+}

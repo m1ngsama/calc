@@ -9,6 +9,7 @@ import { IndiaPensionForm } from "@/components/calculator/IndiaPensionForm";
 import { CanadaPensionForm } from "@/components/calculator/CanadaPensionForm";
 import { Card } from "@/components/ui/Card";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { alternateLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
@@ -54,9 +55,17 @@ export default async function PensionPage({
   const tj = await getTranslations({ locale, namespace: `${countryId}.pension` });
   const tc = await getTranslations({ locale, namespace: "country" });
   const countryName = tc(countryId);
+  const tcalc = await getTranslations({ locale, namespace: "calculator" });
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <Breadcrumb
+        items={[
+          { label: "CalcHub", href: `/${locale}` },
+          { label: countryName, href: `/${locale}/${countryId}` },
+          { label: tcalc("pension"), href: `/${locale}/${countryId}/pension` },
+        ]}
+      />
       <JsonLd
         data={{
           "@context": "https://schema.org",

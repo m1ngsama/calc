@@ -1,0 +1,53 @@
+{
+  "taxYear": 2025,
+  "currency": "CAD",
+  "federalBrackets": [
+    { "min": 0, "max": 57375, "rate": 0.15 },
+    { "min": 57375, "max": 114750, "rate": 0.205 },
+    { "min": 114750, "max": 158519, "rate": 0.26 },
+    { "min": 158519, "max": 220000, "rate": 0.29 },
+    { "min": 220000, "max": null, "rate": 0.33 }
+  ],
+  "federalBPA": 16129,
+  "provincialBrackets": [
+    { "min": 0, "max": 51446, "rate": 0.0505 },
+    { "min": 51446, "max": 102894, "rate": 0.0915 },
+    { "min": 102894, "max": 150000, "rate": 0.1116 },
+    { "min": 150000, "max": 220000, "rate": 0.1216 },
+    { "min": 220000, "max": null, "rate": 0.1316 }
+  ],
+  "provincialBPA": 11865,
+  "province": "Ontario",
+  "ontarioSurtax": {
+    "tier1Threshold": 5315,
+    "tier1Rate": 0.20,
+    "tier2Threshold": 6802,
+    "tier2Rate": 0.36
+  },
+  "ontarioHealthPremium": [
+    { "min": 0, "max": 20000, "annual": 0 },
+    { "min": 20001, "max": 36000, "annual": 300 },
+    { "min": 36001, "max": 48000, "annual": 450 },
+    { "min": 48001, "max": 72000, "annual": 600 },
+    { "min": 72001, "max": 200000, "annual": 750 },
+    { "min": 200001, "max": null, "annual": 900 }
+  ],
+  "cpp": {
+    "employeeRate": 0.0595,
+    "basicExemption": 3500,
+    "ympe": 71300,
+    "maxContribution": 4034.10
+  },
+  "cpp2": {
+    "employeeRate": 0.04,
+    "yampe": 81900,
+    "maxContribution": 424.00
+  },
+  "ei": {
+    "employeeRate": 0.0164,
+    "maximumInsurableEarnings": 65700,
+    "maxPremium": 1077.48
+  },
+  "source": "https://www.canada.ca/en/revenue-agency.html",
+  "lastVerified": "2026-04-25"
+}

@@ -1,0 +1,9 @@
+{
+  "taxYear": 2025,
+  "currency": "CAD",
+  "standardRate": 0.13,
+  "reducedRate": 0.05,
+  "reducedRateItems": "Provinces without HST (Alberta, BC, Saskatchewan, Manitoba), basic groceries, prescription drugs, medical devices",
+  "source": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses.html",
+  "lastVerified": "2026-04-25"
+}

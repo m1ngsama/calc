@@ -1,0 +1,9 @@
+{
+  "taxYear": 2026,
+  "currency": "JPY",
+  "standardRate": 0.10,
+  "reducedRate": 0.08,
+  "reducedRateItems": "Food, non-alcoholic beverages (excluding dining out), newspaper subscriptions (delivered 2+ times/week)",
+  "source": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6303.htm",
+  "lastVerified": "2026-04-25"
+}

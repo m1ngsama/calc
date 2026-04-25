@@ -4,6 +4,7 @@ import { countries, countryIds } from "@/lib/countries";
 import { routing } from "@/i18n/routing";
 import { CurrencyForm } from "@/components/calculator/CurrencyForm";
 import { Card } from "@/components/ui/Card";
+import { JsonLd } from "@/components/seo/JsonLd";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -43,11 +44,24 @@ export default async function CurrencyPage({
 
   const t = await getTranslations({ locale, namespace: "currency" });
   const tc = await getTranslations({ locale, namespace: "country" });
+  const countryName = tc(countryId);
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: `${countryName} Currency Converter`,
+          url: `https://calc.m1ng.space/${locale}/${countryId}/currency`,
+          applicationCategory: "FinanceApplication",
+          operatingSystem: "Any",
+          offers: { "@type": "Offer", price: "0", priceCurrency: country.currency },
+          inLanguage: locale === "zh" ? "zh-CN" : "en",
+        }}
+      />
       <h1 className="text-3xl font-bold text-(--color-navy) mb-2">
-        {t("title", { country: tc(countryId), year: 2026 })}
+        {t("title", { country: countryName, year: 2026 })}
       </h1>
       <p className="text-(--color-text-muted) mb-8">
         {t("description", { currencyCode: country.currency })}

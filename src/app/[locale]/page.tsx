@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { countries } from "@/lib/countries";
 import { routing } from "@/i18n/routing";
+import { JsonLd } from "@/components/seo/JsonLd";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -33,6 +34,16 @@ export default async function HomePage({
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "CalcHub",
+          url: "https://calc.m1ng.space",
+          description: t("subtitle"),
+          inLanguage: locale === "zh" ? "zh-CN" : "en",
+        }}
+      />
       <h1 className="text-3xl font-bold text-(--color-navy) mb-2">
         {t("title")}
       </h1>

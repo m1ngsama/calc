@@ -8,6 +8,7 @@ import { BrazilPensionForm } from "@/components/calculator/BrazilPensionForm";
 import { IndiaPensionForm } from "@/components/calculator/IndiaPensionForm";
 import { CanadaPensionForm } from "@/components/calculator/CanadaPensionForm";
 import { Card } from "@/components/ui/Card";
+import { JsonLd } from "@/components/seo/JsonLd";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -50,9 +51,22 @@ export default async function PensionPage({
 
   const tj = await getTranslations({ locale, namespace: `${countryId}.pension` });
   const tc = await getTranslations({ locale, namespace: "country" });
+  const countryName = tc(countryId);
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: `${countryName} Pension Calculator 2026`,
+          url: `https://calc.m1ng.space/${locale}/${countryId}/pension`,
+          applicationCategory: "FinanceApplication",
+          operatingSystem: "Any",
+          offers: { "@type": "Offer", price: "0", priceCurrency: country.currency },
+          inLanguage: locale === "zh" ? "zh-CN" : "en",
+        }}
+      />
       <h1 className="text-3xl font-bold text-(--color-navy) mb-2">
         {tj("title", { year: 2026 })}
       </h1>
@@ -66,7 +80,7 @@ export default async function PensionPage({
 
       <Card className="mt-8">
         <h2 className="text-lg font-semibold text-(--color-text) mb-3">
-          {tc(countryId)} Pension System
+          {countryName} Pension System
         </h2>
         <div className="prose prose-sm text-(--color-text-muted) max-w-none">
           {tj("howItWorksContent")

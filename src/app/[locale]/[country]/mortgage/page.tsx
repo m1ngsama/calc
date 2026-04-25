@@ -4,6 +4,7 @@ import { countries, countryIds } from "@/lib/countries";
 import { routing } from "@/i18n/routing";
 import { MortgageForm } from "@/components/calculator/MortgageForm";
 import { Card } from "@/components/ui/Card";
+import { JsonLd } from "@/components/seo/JsonLd";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -41,10 +42,24 @@ export default async function MortgagePage({
   const t = await getTranslations({ locale, namespace: "mortgage" });
   const tc = await getTranslations({ locale, namespace: "country" });
 
+  const countryName = tc(countryId);
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: `${countryName} Mortgage Calculator 2026`,
+          url: `https://calc.m1ng.space/${locale}/${countryId}/mortgage`,
+          applicationCategory: "FinanceApplication",
+          operatingSystem: "Any",
+          offers: { "@type": "Offer", price: "0", priceCurrency: country.currency },
+          inLanguage: locale === "zh" ? "zh-CN" : "en",
+        }}
+      />
       <h1 className="text-3xl font-bold text-(--color-navy) mb-2">
-        {t("title", { country: tc(countryId), year: 2026 })}
+        {t("title", { country: countryName, year: 2026 })}
       </h1>
       <p className="text-(--color-text-muted) mb-8">{t("description")}</p>
 
@@ -52,7 +67,7 @@ export default async function MortgagePage({
 
       <Card className="mt-8">
         <h2 className="text-lg font-semibold text-(--color-text) mb-3">
-          {t("howItWorks", { country: tc(countryId) })}
+          {t("howItWorks", { country: countryName })}
         </h2>
         <div className="prose prose-sm text-(--color-text-muted) max-w-none">
           {t("howItWorksContent")

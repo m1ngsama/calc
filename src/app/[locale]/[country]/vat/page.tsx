@@ -4,6 +4,7 @@ import { countries, countryIds } from "@/lib/countries";
 import { routing } from "@/i18n/routing";
 import { VatForm } from "@/components/calculator/VatForm";
 import { Card } from "@/components/ui/Card";
+import { JsonLd } from "@/components/seo/JsonLd";
 import type { VatData } from "@/calculators/vat";
 import type { Metadata } from "next";
 
@@ -24,8 +25,8 @@ export async function generateMetadata({
   const tc = await getTranslations({ locale, namespace: "country" });
   const countryName = tc(countryId);
   return {
-    title: `${countryName} VAT Calculator 2026 | Consumption Tax (消費税)`,
-    description: `Calculate Japanese consumption tax (消費税) at 10% standard or 8% reduced rate. Add or remove tax instantly. Free calculator.`,
+    title: `${countryName} VAT / Sales Tax Calculator 2026 | CalcHub`,
+    description: `Calculate VAT and sales tax in ${countryName}. Add or remove tax instantly based on official rates. Free calculator.`,
   };
 }
 
@@ -48,10 +49,24 @@ export default async function VatPage({
   const tj = await getTranslations({ locale, namespace: `${countryId}.vat` });
   const tc = await getTranslations({ locale, namespace: "country" });
 
+  const countryName = tc(countryId);
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: `${countryName} VAT Calculator 2026`,
+          url: `https://calc.m1ng.space/${locale}/${countryId}/vat`,
+          applicationCategory: "FinanceApplication",
+          operatingSystem: "Any",
+          offers: { "@type": "Offer", price: "0", priceCurrency: country.currency },
+          inLanguage: locale === "zh" ? "zh-CN" : "en",
+        }}
+      />
       <h1 className="text-3xl font-bold text-(--color-navy) mb-2">
-        {t("title", { country: tc(countryId), year: 2026 })}
+        {t("title", { country: countryName, year: 2026 })}
       </h1>
       <p className="text-(--color-text-muted) mb-8">{t("description")}</p>
 
@@ -59,7 +74,7 @@ export default async function VatPage({
 
       <Card className="mt-8">
         <h2 className="text-lg font-semibold text-(--color-text) mb-3">
-          {t("howItWorks", { country: tc(countryId) })}
+          {t("howItWorks", { country: countryName })}
         </h2>
         <div className="prose prose-sm text-(--color-text-muted) max-w-none">
           {tj("howItWorksContent")

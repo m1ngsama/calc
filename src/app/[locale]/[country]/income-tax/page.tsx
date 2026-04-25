@@ -8,6 +8,7 @@ import { BrazilIncomeTaxForm } from "@/components/calculator/BrazilIncomeTaxForm
 import { IndiaIncomeTaxForm } from "@/components/calculator/IndiaIncomeTaxForm";
 import { CanadaIncomeTaxForm } from "@/components/calculator/CanadaIncomeTaxForm";
 import { Card } from "@/components/ui/Card";
+import { JsonLd } from "@/components/seo/JsonLd";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -48,9 +49,23 @@ export default async function IncomeTaxPage({
   ).default;
 
   const t = await getTranslations({ locale, namespace: `${countryId}.incomeTax` });
+  const tc = await getTranslations({ locale, namespace: "country" });
+  const countryName = tc(countryId);
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          name: `${countryName} Income Tax Calculator 2026`,
+          url: `https://calc.m1ng.space/${locale}/${countryId}/income-tax`,
+          applicationCategory: "FinanceApplication",
+          operatingSystem: "Any",
+          offers: { "@type": "Offer", price: "0", priceCurrency: country.currency },
+          inLanguage: locale === "zh" ? "zh-CN" : "en",
+        }}
+      />
       <h1 className="text-3xl font-bold text-(--color-navy) mb-2">
         {t("title", { year: 2026 })}
       </h1>

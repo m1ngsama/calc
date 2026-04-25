@@ -65,7 +65,9 @@
     "pension": {
       "title": "Japan Pension Calculator {year}",
       "description": "Estimate your future pension benefits from National Pension (国民年金) and Employees' Pension (厚生年金) based on your contributions.",
-      "howItWorksContent": "Japan's public pension system has two tiers. The National Pension (国民年金/Kokumin Nenkin) covers all residents aged 20-59 with a flat monthly contribution of ¥16,980. After 40 years of full contributions, the basic pension pays ¥816,000 per year (¥68,000/month) from age 65.\n\nEmployees enrolled in social insurance also contribute to the Employees' Pension (厚生年金/Kousei Nenkin). The contribution rate is 18.3% of standard monthly remuneration, split equally between employer and employee. The benefit is calculated as: average monthly remuneration × 5.481/1000 × contribution months.\n\nYou can claim your pension early from age 60 (with a 0.4% reduction per month) or defer up to age 75 (with a 0.7% increase per month). Deferring to 70 increases your pension by 42%."
+      "howItWorksContent": "Japan's public pension system has two tiers. The National Pension (国民年金/Kokumin Nenkin) covers all residents aged 20-59 with a flat monthly contribution of ¥16,980. After 40 years of full contributions, the basic pension pays ¥816,000 per year (¥68,000/month) from age 65.\n\nEmployees enrolled in social insurance also contribute to the Employees' Pension (厚生年金/Kousei Nenkin). The contribution rate is 18.3% of standard monthly remuneration, split equally between employer and employee. The benefit is calculated as: average monthly remuneration × 5.481/1000 × contribution months.\n\nYou can claim your pension early from age 60 (with a 0.4% reduction per month) or defer up to age 75 (with a 0.7% increase per month). Deferring to 70 increases your pension by 42%.",
+      "dataSource": "Data source: {source}",
+      "lastVerified": "Last verified: {date}"
     }
   },
   "germany": {

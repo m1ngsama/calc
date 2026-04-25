@@ -1,0 +1,11 @@
+{
+  "id": "japan",
+  "name": "Japan",
+  "nameLocal": "日本",
+  "currency": "JPY",
+  "currencySymbol": "¥",
+  "fiscalYearStart": "01-01",
+  "locale": "ja-JP",
+  "flag": "🇯🇵",
+  "availableYears": [2026]
+}

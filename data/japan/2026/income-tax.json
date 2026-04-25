@@ -1,0 +1,35 @@
+{
+  "taxYear": 2026,
+  "currency": "JPY",
+  "brackets": [
+    { "min": 0, "max": 1950000, "rate": 0.05 },
+    { "min": 1950000, "max": 3300000, "rate": 0.10 },
+    { "min": 3300000, "max": 6950000, "rate": 0.20 },
+    { "min": 6950000, "max": 9000000, "rate": 0.23 },
+    { "min": 9000000, "max": 18000000, "rate": 0.33 },
+    { "min": 18000000, "max": 40000000, "rate": 0.40 },
+    { "min": 40000000, "max": null, "rate": 0.45 }
+  ],
+  "reconstructionTaxRate": 0.021,
+  "residenceTaxRate": 0.10,
+  "deductions": {
+    "basic": 480000,
+    "employment": [
+      { "min": 0, "max": 1625000, "rate": 0, "base": 550000 },
+      { "min": 1625000, "max": 1800000, "rate": 0.40, "base": -100000 },
+      { "min": 1800000, "max": 3600000, "rate": 0.30, "base": 80000 },
+      { "min": 3600000, "max": 6600000, "rate": 0.20, "base": 440000 },
+      { "min": 6600000, "max": 8500000, "rate": 0.10, "base": 1100000 },
+      { "min": 8500000, "max": null, "rate": 0, "base": 1950000 }
+    ]
+  },
+  "socialInsurance": {
+    "healthInsuranceRate": 0.04985,
+    "pensionRate": 0.0915,
+    "employmentInsuranceRate": 0.006,
+    "healthInsuranceMax": 1390000,
+    "pensionMax": 713700
+  },
+  "source": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+  "lastVerified": "2026-04-25"
+}

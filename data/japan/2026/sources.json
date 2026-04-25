@@ -1,0 +1,17 @@
+{
+  "incomeTax": {
+    "name": "National Tax Agency (国税庁)",
+    "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+    "description": "Income tax brackets and rates"
+  },
+  "socialInsurance": {
+    "name": "Japan Pension Service (日本年金機構)",
+    "url": "https://www.nenkin.go.jp/",
+    "description": "Pension and health insurance rates"
+  },
+  "employmentInsurance": {
+    "name": "Ministry of Health, Labour and Welfare (厚生労働省)",
+    "url": "https://www.mhlw.go.jp/",
+    "description": "Employment insurance rates"
+  }
+}

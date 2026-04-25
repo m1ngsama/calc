@@ -17,7 +17,9 @@
     "title": "Financial Calculators by Country",
     "subtitle": "Accurate, free, and private. All calculations run in your browser.",
     "pickCountry": "Choose a country to get started",
-    "popularCalculators": "Popular Calculators"
+    "popularCalculators": "Popular Calculators",
+    "calculatorCount": "{count} calculators",
+    "financialCalculators": "Financial Calculators"
   },
   "country": {
     "japan": "Japan",

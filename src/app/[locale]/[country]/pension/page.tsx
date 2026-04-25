@@ -54,6 +54,7 @@ export default async function PensionPage({
     await import(`../../../../../data/${countryId}/2026/pension.json`)
   ).default;
 
+  const t = await getTranslations({ locale, namespace: "pension" });
   const tj = await getTranslations({ locale, namespace: `${countryId}.pension` });
   const tc = await getTranslations({ locale, namespace: "country" });
   const countryName = tc(countryId);
@@ -93,7 +94,7 @@ export default async function PensionPage({
 
       <Card className="mt-8">
         <h2 className="text-lg font-semibold text-(--color-text) mb-3">
-          {countryName} Pension System
+          {t("howItWorks", { country: countryName })}
         </h2>
         <div className="prose prose-sm text-(--color-text-muted) max-w-none">
           {tj("howItWorksContent")

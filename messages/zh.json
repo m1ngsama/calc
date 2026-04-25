@@ -17,7 +17,9 @@
     "title": "各国金融计算器",
     "subtitle": "精确、免费、保护隐私。所有计算在浏览器中完成。",
     "pickCountry": "选择一个国家开始",
-    "popularCalculators": "热门计算器"
+    "popularCalculators": "热门计算器",
+    "calculatorCount": "{count} 个计算器",
+    "financialCalculators": "金融计算器"
   },
   "country": {
     "japan": "日本",

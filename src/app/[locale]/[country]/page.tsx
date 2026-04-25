@@ -49,6 +49,7 @@ export default async function CountryPage({
   setRequestLocale(locale);
   const tc = await getTranslations({ locale, namespace: "country" });
   const tcalc = await getTranslations({ locale, namespace: "calculator" });
+  const th = await getTranslations({ locale, namespace: "home" });
 
   const calculatorLabels: Record<string, string> = {
     "income-tax": tcalc("incometax"),
@@ -77,7 +78,7 @@ export default async function CountryPage({
         {country.flag} {countryName}
       </h1>
       <p className="text-(--color-text-muted) mb-8">
-        {country.currency} &middot; Financial Calculators
+        {country.currency} &middot; {th("financialCalculators")}
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -87,7 +87,7 @@ export default async function HomePage({
                 {tc(country.id)}
               </span>
               <span className="block text-xs text-(--color-text-muted)">
-                {country.calculators.length} calculators
+                {t("calculatorCount", { count: country.calculators.length })}
               </span>
             </div>
           </Link>

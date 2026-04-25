@@ -52,6 +52,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.classList.add("dark")}catch(e){}var l=location.pathname.split("/")[1];if(l==="zh")document.documentElement.lang="zh-CN";else document.documentElement.lang="en"})()`,
           }}
         />
+        {process.env.NEXT_PUBLIC_ADSENSE_ID && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_ID}`}
+            crossOrigin="anonymous"
+          />
+        )}
       </head>
       <body
         className={`${inter.variable} ${mono.variable} font-sans bg-(--color-surface) text-(--color-text) min-h-screen flex flex-col`}

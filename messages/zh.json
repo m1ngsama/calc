@@ -225,6 +225,56 @@
       "lastVerified": "最后验证：{date}"
     }
   },
+  "canada": {
+    "incomeTax": {
+      "title": "加拿大个人所得税计算器 {year}",
+      "description": "根据加拿大税务局（CRA）官方税率，计算联邦和安大略省所得税、CPP和EI缴费。",
+      "annualIncome": "年就业收入",
+      "calculate": "计算税额",
+      "results": "税额明细",
+      "takeHomePay": "到手收入",
+      "perMonth": "每月",
+      "perYear": "每年",
+      "federalTax": "联邦所得税",
+      "provincialTax": "省所得税（安大略）",
+      "ontarioSurtax": "安大略附加税",
+      "ontarioHealthPremium": "安大略健康保费",
+      "cpp": "CPP缴费",
+      "ei": "EI保费",
+      "effectiveRate": "实际税率",
+      "howItWorks": "加拿大所得税制度详解",
+      "howItWorksContent": "加拿大采用联邦-省双重所得税制度。联邦税率从15%到33%，基本个人免税额为$16,129。安大略省税率从5.05%到13.16%，较高的省税额需缴纳额外附加税。\n\nCPP缴费（雇员5.95%）适用于$3,500至$71,300之间的收入。CPP2（4%）适用于$71,300至$81,900之间的收入。EI保费为可保收入（最高$65,700）的1.64%。\n\n联邦和省政府均提供基于个人免税额的非退税税收抵免，使收入的初始部分有效免税。",
+      "dataSource": "数据来源：加拿大税务局（CRA）",
+      "lastVerified": "最后验证：{date}"
+    },
+    "salary": {
+      "howItWorksContent": "加拿大工资需缴纳联邦和省所得税、CPP（加拿大养老金计划）缴费和EI（就业保险）保费。雇主通过工资扣除代扣这些款项。\n\nCPP缴费由雇主和雇员各承担5.95%，适用于$3,500至$71,300之间的应计养老金收入。EI保费为雇员1.64%，适用于最高$65,700的可保收入。\n\n此处显示的到手工资使用安大略省税率。其他省份税率不同。雇员还可通过工作场所养老金计划或RRSP获得额外税收优惠。"
+    },
+    "vat": {
+      "howItWorksContent": "加拿大统一销售税（HST）将联邦GST（5%）与参与省份的省销售税合并。在安大略省，HST合计税率为13%。\n\n基本食品杂货、处方药和医疗器械为零税率（0%）。阿尔伯塔省等省份无省销售税，仅缴纳5%的联邦GST。\n\n注册GST/HST的企业可通过进项税抵免（ITC）收回在商业支出中支付的GST/HST。"
+    },
+    "pension": {
+      "title": "加拿大养老金计算器 {year}",
+      "description": "根据您的收入和计划退休年龄，估算CPP退休金和OAS养老金。",
+      "annualIncome": "年就业收入",
+      "currentAge": "当前年龄",
+      "contributedYears": "已缴纳CPP年数",
+      "claimAge": "计划CPP领取年龄",
+      "calculate": "估算养老金",
+      "results": "养老金估算结果",
+      "cppMonthly": "月CPP养老金",
+      "oasMonthly": "月OAS（65岁起）",
+      "totalMonthly": "月总养老金",
+      "cppClaimAdjustment": "CPP领取年龄调整",
+      "earlyPenalty": "提前领取减额",
+      "deferralBonus": "延迟领取增额",
+      "noAdjustment": "标准（无调整）",
+      "currentCppContribution": "当前年CPP缴费",
+      "howItWorksContent": "加拿大退休收入有两大公共支柱。CPP（加拿大养老金计划）基于缴费，65岁最高月领$1,433（2025年）。可从60岁起提前领取（-36%）或延迟至70岁（+42%）。\n\nOAS（老年保障金）基于居住年限，65岁起最高月领$727.67。收入超过$90,997时，OAS按15%的比例收回。\n\nCPP福利取决于您相对于年度最高应计养老金收入（2025年$71,300）的缴费历史。CPP和OAS均按通胀指数调整。",
+      "dataSource": "数据来源：{source}",
+      "lastVerified": "最后验证：{date}"
+    }
+  },
   "salary": {
     "title": "{country} 工资计算器 {year}",
     "description": "计算扣除税费和社会保险后的实际到手工资。",

@@ -225,6 +225,56 @@
       "lastVerified": "Last verified: {date}"
     }
   },
+  "canada": {
+    "incomeTax": {
+      "title": "Canada Income Tax Calculator {year}",
+      "description": "Calculate your Canadian federal and Ontario provincial income tax, CPP, and EI contributions based on official CRA rates.",
+      "annualIncome": "Annual Employment Income",
+      "calculate": "Calculate Tax",
+      "results": "Tax Breakdown",
+      "takeHomePay": "Take-Home Pay",
+      "perMonth": "per month",
+      "perYear": "per year",
+      "federalTax": "Federal Income Tax",
+      "provincialTax": "Provincial Tax (Ontario)",
+      "ontarioSurtax": "Ontario Surtax",
+      "ontarioHealthPremium": "Ontario Health Premium",
+      "cpp": "CPP Contributions",
+      "ei": "EI Premiums",
+      "effectiveRate": "Effective Tax Rate",
+      "howItWorks": "How Canadian Income Tax Works",
+      "howItWorksContent": "Canada uses a dual federal-provincial income tax system. Federal tax rates range from 15% to 33% with a basic personal amount of $16,129. Ontario provincial rates range from 5.05% to 13.16% with an additional surtax on higher provincial tax.\n\nCPP contributions (5.95% employee share) apply on earnings between $3,500 and $71,300. CPP2 (4%) applies on earnings between $71,300 and $81,900. EI premiums are 1.64% on insurable earnings up to $65,700.\n\nBoth federal and provincial governments provide non-refundable tax credits based on personal amounts, effectively making the first portion of income tax-free.",
+      "dataSource": "Data source: Canada Revenue Agency (CRA)",
+      "lastVerified": "Last verified: {date}"
+    },
+    "salary": {
+      "howItWorksContent": "Canadian salaries are subject to federal and provincial income tax, CPP (Canada Pension Plan) contributions, and EI (Employment Insurance) premiums. Employers withhold these through payroll deductions.\n\nCPP contributions are shared equally between employer and employee at 5.95% each, on pensionable earnings between $3,500 and $71,300. EI premiums are 1.64% (employee) on insurable earnings up to $65,700.\n\nThe take-home pay shown uses Ontario provincial tax rates. Other provinces have different rates. Employees may also contribute to workplace pension plans or RRSPs for additional tax savings."
+    },
+    "vat": {
+      "howItWorksContent": "Canada's Harmonized Sales Tax (HST) combines the federal GST (5%) with provincial sales tax in participating provinces. In Ontario, the combined HST rate is 13%.\n\nBasic groceries, prescription drugs, and medical devices are zero-rated (0%). Some provinces like Alberta have no provincial sales tax, paying only the 5% federal GST.\n\nBusinesses registered for GST/HST can claim Input Tax Credits (ITCs) to recover GST/HST paid on business expenses."
+    },
+    "pension": {
+      "title": "Canada Pension Calculator {year}",
+      "description": "Estimate your CPP retirement pension and OAS benefits based on your earnings and planned retirement age.",
+      "annualIncome": "Annual Employment Income",
+      "currentAge": "Current Age",
+      "contributedYears": "Years Already Contributing to CPP",
+      "claimAge": "Planned CPP Start Age",
+      "calculate": "Estimate Pension",
+      "results": "Pension Estimate",
+      "cppMonthly": "Monthly CPP Pension",
+      "oasMonthly": "Monthly OAS (at 65)",
+      "totalMonthly": "Total Monthly Pension",
+      "cppClaimAdjustment": "CPP Claim Age Adjustment",
+      "earlyPenalty": "Early claim reduction",
+      "deferralBonus": "Deferral increase",
+      "noAdjustment": "Standard (no adjustment)",
+      "currentCppContribution": "Current Annual CPP Contribution",
+      "howItWorksContent": "Canada's retirement income has two main public pillars. CPP (Canada Pension Plan) is contribution-based, with the maximum monthly benefit of $1,433 at age 65 (2025). Benefits can start as early as 60 (−36%) or as late as 70 (+42%).\n\nOAS (Old Age Security) is residency-based, paying up to $727.67/month at age 65. OAS is clawed back at 15% for income above $90,997.\n\nCPP benefits depend on your contribution history relative to the yearly maximum pensionable earnings ($71,300 in 2025). Both CPP and OAS are indexed to inflation.",
+      "dataSource": "Data source: {source}",
+      "lastVerified": "Last verified: {date}"
+    }
+  },
   "salary": {
     "title": "{country} Salary Calculator {year}",
     "description": "Calculate your take-home salary after taxes and social insurance deductions.",

@@ -37,6 +37,15 @@ export const countries: Record<string, CountryMeta> = {
     flag: "🇮🇳",
     calculators: ["income-tax", "salary", "mortgage", "vat", "pension", "currency"],
   },
+  canada: {
+    id: "canada",
+    currency: "CAD",
+    currencySymbol: "$",
+    fiscalYearStart: "01-01",
+    locale: "en-CA",
+    flag: "🇨🇦",
+    calculators: ["income-tax", "salary", "mortgage", "vat", "pension", "currency"],
+  },
 };
 
 export const countryIds = Object.keys(countries);

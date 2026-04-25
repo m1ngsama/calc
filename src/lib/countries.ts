@@ -8,7 +8,7 @@ export const countries: Record<string, CountryMeta> = {
     fiscalYearStart: "01-01",
     locale: "ja-JP",
     flag: "🇯🇵",
-    calculators: ["income-tax", "salary", "mortgage", "vat"],
+    calculators: ["income-tax", "salary", "mortgage", "vat", "pension", "currency"],
   },
 };
 

@@ -61,6 +61,9 @@
     },
     "vat": {
       "howItWorksContent": "Japan's consumption tax (消費税) applies to most goods and services at a standard rate of 10%. A reduced rate of 8% applies to food and non-alcoholic beverages (excluding dining out) and newspaper subscriptions.\n\nThe consumption tax was last raised from 8% to 10% in October 2019, with the reduced rate introduced simultaneously. Businesses are required to display tax-inclusive prices.\n\nFor business-to-business transactions, the Invoice System (インボイス制度) requires qualified invoices for input tax credit claims."
+    },
+    "pension": {
+      "howItWorksContent": "Japan's public pension system has two tiers. The National Pension (国民年金/Kokumin Nenkin) covers all residents aged 20-59 with a flat monthly contribution of ¥16,980. After 40 years of full contributions, the basic pension pays ¥816,000 per year (¥68,000/month) from age 65.\n\nEmployees enrolled in social insurance also contribute to the Employees' Pension (厚生年金/Kousei Nenkin). The contribution rate is 18.3% of standard monthly remuneration, split equally between employer and employee. The benefit is calculated as: average monthly remuneration × 5.481/1000 × contribution months.\n\nYou can claim your pension early from age 60 (with a 0.4% reduction per month) or defer up to age 75 (with a 0.7% increase per month). Deferring to 70 increases your pension by 42%."
     }
   },
   "salary": {
@@ -109,6 +112,50 @@
     "howItWorksContent": "A mortgage is a loan used to purchase real estate. The most common type is a fixed-rate mortgage where the interest rate remains constant throughout the loan term. Monthly payments are calculated using an amortization formula that ensures equal payments over the life of the loan.\n\nEach payment consists of two parts: principal (reducing the loan balance) and interest (the cost of borrowing). In the early years, a larger portion goes toward interest. Over time, more of each payment goes toward principal.\n\nThe formula used is: M = P × [r(1+r)^n] / [(1+r)^n - 1], where M is the monthly payment, P is the principal, r is the monthly interest rate, and n is the total number of payments.",
     "dataSource": "Calculator uses standard amortization formula",
     "lastVerified": "Last verified: {date}"
+  },
+  "pension": {
+    "title": "{country} Pension Calculator {year}",
+    "description": "Estimate your future pension benefits from National Pension and Employees' Pension based on your contributions.",
+    "pensionType": "Pension Type",
+    "kokuminOnly": "National Pension Only (Self-Employed)",
+    "kousei": "Employees' Pension (Company Employee)",
+    "currentAge": "Current Age",
+    "annualIncome": "Annual Gross Income",
+    "contributedYears": "Years Already Contributed",
+    "claimAge": "Planned Claim Age",
+    "calculate": "Estimate Pension",
+    "results": "Pension Estimate",
+    "monthlyBenefit": "Monthly Pension at Claim Age",
+    "annualBenefit": "Annual Pension at Claim Age",
+    "kokuminPortion": "National Pension (Basic)",
+    "kouseiPortion": "Employees' Pension",
+    "totalContributions": "Lifetime Contributions (Your Share)",
+    "monthlyContribution": "Current Monthly Contribution",
+    "claimAgeAdjustment": "Claim Age Adjustment",
+    "earlyPenalty": "Early claim penalty",
+    "deferralBonus": "Deferral bonus",
+    "noAdjustment": "Standard (no adjustment)",
+    "howItWorks": "How the Pension System Works in {country}",
+    "dataSource": "Data source: {source}",
+    "lastVerified": "Last verified: {date}"
+  },
+  "currency": {
+    "title": "{country} Currency Converter {year}",
+    "description": "Convert {currencyCode} to and from major world currencies using live exchange rates.",
+    "amount": "Amount",
+    "from": "From",
+    "to": "To",
+    "swap": "Swap",
+    "convert": "Convert",
+    "result": "Conversion Result",
+    "rate": "Exchange Rate",
+    "lastUpdated": "Rates last updated",
+    "loading": "Loading rates...",
+    "error": "Failed to load exchange rates. Please try again.",
+    "howItWorks": "About Currency Exchange",
+    "howItWorksContent": "Exchange rates fluctuate based on global markets, monetary policy, and economic conditions. The rates shown here are mid-market rates — the real exchange rate without bank markup.\n\nWhen exchanging currency at banks or money changers, you will typically pay a spread (difference between buy and sell rates) of 1-3% above the mid-market rate. Credit cards usually offer rates close to mid-market with a foreign transaction fee of 1-3%.\n\nRates are fetched from the European Central Bank via the Frankfurter API and updated daily on business days.",
+    "dataSource": "Data source: European Central Bank via Frankfurter API",
+    "lastVerified": "Rates updated daily"
   },
   "vat": {
     "title": "{country} VAT Calculator {year}",

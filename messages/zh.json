@@ -61,6 +61,9 @@
     },
     "vat": {
       "howItWorksContent": "日本的消费税（消費税）适用于大多数商品和服务，标准税率为10%。食品和非酒精饮料（不含外食）以及报纸订阅适用8%的轻减税率。\n\n消费税于2019年10月从8%提高至10%，同时引入轻减税率制度。商家被要求以含税价格标示商品价格。\n\n对于企业间交易，发票制度（インボイス制度）要求使用合格发票才能申请进项税额抵扣。"
+    },
+    "pension": {
+      "howItWorksContent": "日本的公共年金制度分为两层。国民年金（基础年金）覆盖所有20-59岁居民，每月缴费16,980日元。缴满40年后，65岁起每年可领取基础年金816,000日元（每月68,000日元）。\n\n加入社会保险的企业员工还需缴纳厚生年金。缴费率为标准报酬月额的18.3%，由雇主和雇员各负担一半。领取额计算公式为：平均标准报酬月额 × 5.481/1000 × 加入月数。\n\n年金可以从60岁起提前领取（每月减少0.4%），也可以延迟到75岁领取（每月增加0.7%）。延迟到70岁领取可增加42%。"
     }
   },
   "salary": {
@@ -109,6 +112,50 @@
     "howItWorksContent": "房贷是用于购买房产的贷款。最常见的类型是固定利率贷款，利率在整个贷款期间保持不变。每月还款额使用等额本息公式计算，确保在贷款期限内每月还款金额相同。\n\n每次还款由两部分组成：本金（减少贷款余额）和利息（借款成本）。在初期，较大部分用于支付利息。随着时间推移，更多的还款用于偿还本金。\n\n使用的公式为：M = P × [r(1+r)^n] / [(1+r)^n - 1]，其中M是月还款额，P是本金，r是月利率，n是总还款次数。",
     "dataSource": "使用标准等额本息公式计算",
     "lastVerified": "最后验证：{date}"
+  },
+  "pension": {
+    "title": "{country} 年金计算器 {year}",
+    "description": "根据您的缴费情况，估算国民年金和厚生年金的未来领取金额。",
+    "pensionType": "年金类型",
+    "kokuminOnly": "仅国民年金（个体经营者）",
+    "kousei": "厚生年金（企业员工）",
+    "currentAge": "当前年龄",
+    "annualIncome": "年收入（税前）",
+    "contributedYears": "已缴纳年数",
+    "claimAge": "计划领取年龄",
+    "calculate": "估算年金",
+    "results": "年金估算结果",
+    "monthlyBenefit": "领取年龄的月年金",
+    "annualBenefit": "领取年龄的年年金",
+    "kokuminPortion": "国民年金（基础部分）",
+    "kouseiPortion": "厚生年金",
+    "totalContributions": "终身缴费总额（个人负担）",
+    "monthlyContribution": "当前每月缴费",
+    "claimAgeAdjustment": "领取年龄调整",
+    "earlyPenalty": "提前领取减额",
+    "deferralBonus": "延迟领取增额",
+    "noAdjustment": "标准（无调整）",
+    "howItWorks": "{country}年金制度详解",
+    "dataSource": "数据来源：{source}",
+    "lastVerified": "最后验证：{date}"
+  },
+  "currency": {
+    "title": "{country} 汇率换算器 {year}",
+    "description": "使用实时汇率在{currencyCode}和主要货币之间进行换算。",
+    "amount": "金额",
+    "from": "从",
+    "to": "到",
+    "swap": "交换",
+    "convert": "换算",
+    "result": "换算结果",
+    "rate": "汇率",
+    "lastUpdated": "汇率最后更新",
+    "loading": "加载汇率中...",
+    "error": "加载汇率失败，请重试。",
+    "howItWorks": "关于货币汇率",
+    "howItWorksContent": "汇率根据全球市场、货币政策和经济状况不断波动。此处显示的是中间汇率——不含银行加价的真实汇率。\n\n在银行或换汇处兑换货币时，通常需要支付中间汇率基础上1-3%的买卖差价。信用卡通常提供接近中间汇率的汇率，外加1-3%的境外交易手续费。\n\n汇率数据来自欧洲央行，通过Frankfurter API获取，在工作日每天更新。",
+    "dataSource": "数据来源：欧洲央行（Frankfurter API）",
+    "lastVerified": "汇率每日更新"
   },
   "vat": {
     "title": "{country} 消费税计算器 {year}",

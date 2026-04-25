@@ -1,0 +1,19 @@
+{
+  "taxYear": 2026,
+  "currency": "JPY",
+  "kokumin": {
+    "monthlyContribution": 16980,
+    "maxContributionMonths": 480,
+    "fullAnnualBenefit": 816000,
+    "earlyClaimPenaltyPerMonth": 0.004,
+    "deferralBonusPerMonth": 0.007
+  },
+  "kousei": {
+    "employeeRate": 0.0915,
+    "remunerationCap": 650000,
+    "accrualRate": 0.005481
+  },
+  "normalRetirementAge": 65,
+  "source": "https://www.nenkin.go.jp/service/kokunen/hokenryo/hokenryo.html",
+  "lastVerified": "2026-04-25"
+}

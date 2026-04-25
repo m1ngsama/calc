@@ -26,6 +26,12 @@ export const metadata: Metadata = {
     siteName: "CalcHub",
     locale: "en_US",
   },
+  manifest: "/manifest.json",
+  other: {
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

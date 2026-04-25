@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "CalcHub",
     locale: "en_US",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "CalcHub — Financial Calculators by Country" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
   },
   manifest: "/manifest.json",
   other: {
@@ -40,7 +45,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.classList.add("dark")}catch(e){}})()`,
+            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.classList.add("dark")}catch(e){}var l=location.pathname.split("/")[1];if(l==="zh")document.documentElement.lang="zh-CN";else document.documentElement.lang="en"})()`,
           }}
         />
       </head>

@@ -4,6 +4,7 @@ import { countries, countryIds } from "@/lib/countries";
 import { routing } from "@/i18n/routing";
 import { JapanPensionForm } from "@/components/calculator/JapanPensionForm";
 import { GermanyPensionForm } from "@/components/calculator/GermanyPensionForm";
+import { BrazilPensionForm } from "@/components/calculator/BrazilPensionForm";
 import { Card } from "@/components/ui/Card";
 import type { Metadata } from "next";
 
@@ -57,6 +58,7 @@ export default async function PensionPage({
 
       {countryId === "japan" && <JapanPensionForm pensionData={pensionData} />}
       {countryId === "germany" && <GermanyPensionForm pensionData={pensionData} />}
+      {countryId === "brazil" && <BrazilPensionForm pensionData={pensionData} />}
 
       <Card className="mt-8">
         <h2 className="text-lg font-semibold text-(--color-text) mb-3">

@@ -4,6 +4,7 @@ import { countries, countryIds } from "@/lib/countries";
 import { routing } from "@/i18n/routing";
 import { JapanSalaryForm } from "@/components/calculator/JapanSalaryForm";
 import { GermanySalaryForm } from "@/components/calculator/GermanySalaryForm";
+import { BrazilSalaryForm } from "@/components/calculator/BrazilSalaryForm";
 import { Card } from "@/components/ui/Card";
 import type { Metadata } from "next";
 
@@ -57,6 +58,7 @@ export default async function SalaryPage({
 
       {countryId === "japan" && <JapanSalaryForm taxData={taxData} />}
       {countryId === "germany" && <GermanySalaryForm taxData={taxData} />}
+      {countryId === "brazil" && <BrazilSalaryForm taxData={taxData} />}
 
       <Card className="mt-8">
         <h2 className="text-lg font-semibold text-(--color-text) mb-3">

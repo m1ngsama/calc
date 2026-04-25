@@ -124,6 +124,22 @@ export default async function HomePage({
         ))}
       </div>
 
+      <h2 className="text-lg font-semibold text-(--color-text) mt-12 mb-4">
+        {t("browseByCalculator")}
+      </h2>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {Object.keys(calcKeyMap).map((type) => (
+          <Link
+            key={type}
+            href={`/${locale}/calculators/${type}`}
+            className="p-3 rounded-lg border border-(--color-border) bg-(--color-surface) hover:border-(--color-accent) transition-colors text-sm text-center font-medium text-(--color-text)"
+          >
+            {tcalc(calcKeyMap[type])}
+          </Link>
+        ))}
+      </div>
+
       <section className="mt-16">
         <h2 className="text-lg font-semibold text-(--color-text) mb-6">
           {t("faq")}

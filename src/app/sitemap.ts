@@ -9,6 +9,8 @@ const BASE_URL = "https://calc.m1ng.space";
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
+  const calculatorTypes = ["income-tax", "salary", "mortgage", "vat", "pension", "currency"];
+
   for (const locale of routing.locales) {
     entries.push({
       url: `${BASE_URL}/${locale}`,
@@ -16,6 +18,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     });
+
+    for (const calc of calculatorTypes) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/calculators/${calc}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.7,
+      });
+    }
 
     for (const [countryId, country] of Object.entries(countries)) {
       entries.push({

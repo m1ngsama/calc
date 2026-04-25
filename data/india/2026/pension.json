@@ -1,0 +1,20 @@
+{
+  "taxYear": 2025,
+  "currency": "INR",
+  "eps": {
+    "pensionableSalaryCap": 15000,
+    "divisor": 70,
+    "minimumPension": 1000,
+    "bonusYearsThreshold": 20,
+    "bonusYears": 2,
+    "minimumServiceYears": 10
+  },
+  "epf": {
+    "employeeRate": 0.12,
+    "epsRate": 0.0833,
+    "interestRate": 0.0825
+  },
+  "retirementAge": 58,
+  "source": "https://www.epfindia.gov.in",
+  "lastVerified": "2026-04-25"
+}

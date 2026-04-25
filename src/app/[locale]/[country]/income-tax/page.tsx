@@ -3,8 +3,8 @@ import { notFound } from "next/navigation";
 import { countries, countryIds } from "@/lib/countries";
 import { routing } from "@/i18n/routing";
 import { JapanIncomeTaxForm } from "@/components/calculator/JapanIncomeTaxForm";
+import { GermanyIncomeTaxForm } from "@/components/calculator/GermanyIncomeTaxForm";
 import { Card } from "@/components/ui/Card";
-import type { IncomeTaxData } from "@/lib/types";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -40,7 +40,7 @@ export default async function IncomeTaxPage({
 
   setRequestLocale(locale);
 
-  const taxData: IncomeTaxData = (
+  const taxData = (
     await import(`../../../../../data/${countryId}/2026/income-tax.json`)
   ).default;
 
@@ -53,7 +53,8 @@ export default async function IncomeTaxPage({
       </h1>
       <p className="text-(--color-text-muted) mb-8">{t("description")}</p>
 
-      <JapanIncomeTaxForm taxData={taxData} />
+      {countryId === "japan" && <JapanIncomeTaxForm taxData={taxData} />}
+      {countryId === "germany" && <GermanyIncomeTaxForm taxData={taxData} />}
 
       <Card className="mt-8">
         <h2 className="text-lg font-semibold text-(--color-text) mb-3">
@@ -62,7 +63,7 @@ export default async function IncomeTaxPage({
         <div className="prose prose-sm text-(--color-text-muted) max-w-none">
           {t("howItWorksContent")
             .split("\n\n")
-            .map((paragraph, i) => (
+            .map((paragraph: string, i: number) => (
               <p key={i}>{paragraph}</p>
             ))}
         </div>

@@ -2,9 +2,9 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { countries, countryIds } from "@/lib/countries";
 import { routing } from "@/i18n/routing";
-import { JapanVatForm } from "@/components/calculator/JapanVatForm";
+import { VatForm } from "@/components/calculator/VatForm";
 import { Card } from "@/components/ui/Card";
-import type { VatData } from "@/calculators/japan/vat";
+import type { VatData } from "@/calculators/vat";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -55,7 +55,7 @@ export default async function VatPage({
       </h1>
       <p className="text-(--color-text-muted) mb-8">{t("description")}</p>
 
-      <JapanVatForm vatData={vatData} />
+      <VatForm vatData={vatData} currency={country.currency} currencySymbol={country.currencySymbol} />
 
       <Card className="mt-8">
         <h2 className="text-lg font-semibold text-(--color-text) mb-3">
@@ -69,7 +69,7 @@ export default async function VatPage({
             ))}
         </div>
         <div className="mt-4 pt-4 border-t border-(--color-border) text-xs text-(--color-text-muted)">
-          <p>{t("dataSource", { source: "National Tax Agency (国税庁)" })}</p>
+          <p>{t("dataSource", { source: vatData.source })}</p>
           <p>{t("lastVerified", { date: vatData.lastVerified })}</p>
         </div>
       </Card>

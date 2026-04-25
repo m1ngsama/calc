@@ -3,8 +3,8 @@ import { notFound } from "next/navigation";
 import { countries, countryIds } from "@/lib/countries";
 import { routing } from "@/i18n/routing";
 import { JapanSalaryForm } from "@/components/calculator/JapanSalaryForm";
+import { GermanySalaryForm } from "@/components/calculator/GermanySalaryForm";
 import { Card } from "@/components/ui/Card";
-import type { IncomeTaxData } from "@/lib/types";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -25,7 +25,7 @@ export async function generateMetadata({
   const countryName = tc(countryId);
   return {
     title: `${countryName} Salary Calculator 2026 | Take-Home Pay`,
-    description: `Calculate your take-home salary in ${countryName} after income tax, residence tax, and social insurance. Free, accurate, based on official rates.`,
+    description: `Calculate your take-home salary in ${countryName} after income tax and social insurance. Free, accurate, based on official rates.`,
   };
 }
 
@@ -40,7 +40,7 @@ export default async function SalaryPage({
 
   setRequestLocale(locale);
 
-  const taxData: IncomeTaxData = (
+  const taxData = (
     await import(`../../../../../data/${countryId}/2026/income-tax.json`)
   ).default;
 
@@ -55,7 +55,8 @@ export default async function SalaryPage({
       </h1>
       <p className="text-(--color-text-muted) mb-8">{t("description")}</p>
 
-      <JapanSalaryForm taxData={taxData} />
+      {countryId === "japan" && <JapanSalaryForm taxData={taxData} />}
+      {countryId === "germany" && <GermanySalaryForm taxData={taxData} />}
 
       <Card className="mt-8">
         <h2 className="text-lg font-semibold text-(--color-text) mb-3">
@@ -69,7 +70,7 @@ export default async function SalaryPage({
             ))}
         </div>
         <div className="mt-4 pt-4 border-t border-(--color-border) text-xs text-(--color-text-muted)">
-          <p>{t("dataSource", { source: "National Tax Agency (国税庁)" })}</p>
+          <p>{t("dataSource", { source: taxData.source })}</p>
           <p>{t("lastVerified", { date: taxData.lastVerified })}</p>
         </div>
       </Card>

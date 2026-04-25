@@ -179,6 +179,52 @@
       "lastVerified": "Last verified: {date}"
     }
   },
+  "india": {
+    "incomeTax": {
+      "title": "India Income Tax Calculator {year}",
+      "description": "Calculate your Indian income tax under the New Tax Regime (FY 2025-26) with standard deduction, Section 87A rebate, surcharge, and cess.",
+      "annualIncome": "Annual Gross Income",
+      "calculate": "Calculate Tax",
+      "results": "Tax Breakdown",
+      "takeHomePay": "Take-Home Pay",
+      "perMonth": "per month",
+      "perYear": "per year",
+      "incomeTax": "Income Tax",
+      "surcharge": "Surcharge",
+      "cess": "Health & Education Cess (4%)",
+      "rebate87A": "Section 87A Rebate",
+      "epf": "EPF Contribution (12%)",
+      "professionalTax": "Professional Tax",
+      "effectiveRate": "Effective Tax Rate",
+      "howItWorks": "How India Income Tax Works",
+      "howItWorksContent": "India's New Tax Regime (default since FY 2023-24) uses progressive tax slabs from 0% to 30%. The basic exemption limit is ₹4,00,000 with a standard deduction of ₹75,000 for salaried employees.\n\nSection 87A provides a full rebate for taxable income up to ₹12,00,000, making the effective zero-tax threshold ₹12,75,000 for salaried individuals. Above ₹50 lakh, a surcharge of 10-25% applies.\n\nHealth and Education Cess at 4% is levied on the total tax and surcharge. EPF contributions (12% of basic salary) are deducted by employers for eligible employees.",
+      "dataSource": "Data source: Income Tax Department of India",
+      "lastVerified": "Last verified: {date}"
+    },
+    "salary": {
+      "howItWorksContent": "Indian salaries are subject to income tax (TDS), EPF contributions, and professional tax. Employers deduct TDS monthly based on estimated annual tax liability.\n\nEPF (Employee Provident Fund) contributions are 12% of basic salary + DA, matched by the employer. The employee contribution goes entirely to EPF, while 8.33% of the employer's share goes to the pension scheme (EPS).\n\nProfessional tax varies by state (max ₹2,500/year). The take-home salary shown is after all statutory deductions."
+    },
+    "vat": {
+      "howItWorksContent": "India's Goods and Services Tax (GST) replaced multiple indirect taxes in July 2017. It has a four-tier structure: 5% (essentials), 12% (standard goods), 18% (most services and manufactured goods), and 28% (luxury and demerit goods).\n\nGST is a destination-based tax split between the Centre (CGST) and State (SGST) for intra-state transactions, or collected as IGST for inter-state transactions. Fresh food, healthcare, and education are exempt.\n\nInput tax credit allows businesses to offset GST paid on purchases against GST collected on sales."
+    },
+    "pension": {
+      "title": "India Pension Calculator {year}",
+      "description": "Estimate your EPS pension and EPF corpus based on your salary and years of service.",
+      "monthlySalary": "Monthly Basic Salary + DA",
+      "currentAge": "Current Age",
+      "serviceYears": "Years of Service Completed",
+      "calculate": "Estimate Pension",
+      "results": "Pension Estimate",
+      "monthlyPension": "Monthly EPS Pension",
+      "epfCorpus": "EPF Corpus at Retirement",
+      "pensionableSalary": "Pensionable Salary (capped)",
+      "pensionableService": "Total Pensionable Service",
+      "monthlyEpfContribution": "Monthly EPF Contribution (Your Share)",
+      "howItWorksContent": "India's Employee Pension Scheme (EPS) provides a monthly pension based on the formula: (Pensionable Salary × Pensionable Service) / 70.\n\nPensionable salary is capped at ₹15,000/month (average of last 60 months). A bonus of 2 years is added to service if you complete 20+ years. Minimum pension is ₹1,000/month, and minimum 10 years of service is required.\n\nSeparately, EPF accumulates as a savings corpus with interest (currently 8.25% p.a.), available for withdrawal at retirement age 58.",
+      "dataSource": "Data source: {source}",
+      "lastVerified": "Last verified: {date}"
+    }
+  },
   "salary": {
     "title": "{country} Salary Calculator {year}",
     "description": "Calculate your take-home salary after taxes and social insurance deductions.",

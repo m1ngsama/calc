@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { JapanIncomeTaxForm } from "@/components/calculator/JapanIncomeTaxForm";
 import { GermanyIncomeTaxForm } from "@/components/calculator/GermanyIncomeTaxForm";
 import { BrazilIncomeTaxForm } from "@/components/calculator/BrazilIncomeTaxForm";
+import { IndiaIncomeTaxForm } from "@/components/calculator/IndiaIncomeTaxForm";
 import { Card } from "@/components/ui/Card";
 import type { Metadata } from "next";
 
@@ -57,6 +58,7 @@ export default async function IncomeTaxPage({
       {countryId === "japan" && <JapanIncomeTaxForm taxData={taxData} />}
       {countryId === "germany" && <GermanyIncomeTaxForm taxData={taxData} />}
       {countryId === "brazil" && <BrazilIncomeTaxForm taxData={taxData} />}
+      {countryId === "india" && <IndiaIncomeTaxForm taxData={taxData} />}
 
       <Card className="mt-8">
         <h2 className="text-lg font-semibold text-(--color-text) mb-3">

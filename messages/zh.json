@@ -179,6 +179,52 @@
       "lastVerified": "最后验证：{date}"
     }
   },
+  "india": {
+    "incomeTax": {
+      "title": "印度个人所得税计算器 {year}",
+      "description": "根据新税制（FY 2025-26）计算您的印度所得税，含标准扣除、87A退税、附加税和教育附加费。",
+      "annualIncome": "年收入（税前）",
+      "calculate": "计算税额",
+      "results": "税额明细",
+      "takeHomePay": "到手收入",
+      "perMonth": "每月",
+      "perYear": "每年",
+      "incomeTax": "所得税",
+      "surcharge": "附加税",
+      "cess": "健康与教育附加费（4%）",
+      "rebate87A": "第87A条退税",
+      "epf": "公积金（EPF，12%）",
+      "professionalTax": "职业税",
+      "effectiveRate": "实际税率",
+      "howItWorks": "印度所得税制度详解",
+      "howItWorksContent": "印度新税制（自FY 2023-24起默认适用）采用0%至30%的累进税率。基本免税额为₹4,00,000，工薪阶层享有₹75,000的标准扣除。\n\n第87A条为应税收入不超过₹12,00,000者提供全额退税，使工薪人员的有效免税门槛达到₹12,75,000。超过₹50 lakh的收入需缴纳10-25%的附加税。\n\n在总税额和附加税基础上征收4%的健康与教育附加费。雇主为符合条件的雇员代扣12%的公积金（EPF）。",
+      "dataSource": "数据来源：印度所得税部门",
+      "lastVerified": "最后验证：{date}"
+    },
+    "salary": {
+      "howItWorksContent": "印度工资需缴纳所得税（TDS）、公积金（EPF）和职业税。雇主根据预估年度税额每月代扣TDS。\n\nEPF缴费为基本工资+DA的12%，雇主等额匹配。雇员缴费全部进入EPF账户，雇主缴费中8.33%进入养老金计划（EPS）。\n\n职业税因邦而异（最高₹2,500/年）。此处显示的到手工资为扣除所有法定款项后的金额。"
+    },
+    "vat": {
+      "howItWorksContent": "印度商品及服务税（GST）于2017年7月取代了多种间接税。采用四档税率：5%（必需品）、12%（标准商品）、18%（大多数服务和制造品）和28%（奢侈品和非必需品）。\n\nGST按目的地征税，州内交易分为中央GST（CGST）和邦GST（SGST），跨邦交易则征收统一GST（IGST）。新鲜食品、医疗和教育免税。\n\n进项税抵扣允许企业将采购支付的GST抵消销售收取的GST。"
+    },
+    "pension": {
+      "title": "印度养老金计算器 {year}",
+      "description": "根据您的工资和服务年限，估算EPS养老金和EPF公积金余额。",
+      "monthlySalary": "月基本工资 + DA",
+      "currentAge": "当前年龄",
+      "serviceYears": "已完成服务年数",
+      "calculate": "估算养老金",
+      "results": "养老金估算结果",
+      "monthlyPension": "月EPS养老金",
+      "epfCorpus": "退休时EPF余额",
+      "pensionableSalary": "可计算养老金工资（上限）",
+      "pensionableService": "总可计算服务年限",
+      "monthlyEpfContribution": "每月EPF缴费（个人）",
+      "howItWorksContent": "印度雇员养老金计划（EPS）按公式提供月养老金：（可计算工资 × 可计算服务年限）/ 70。\n\n可计算工资上限为₹15,000/月（最后60个月平均值）。服务满20年可额外获得2年奖励。最低养老金为₹1,000/月，需至少10年服务。\n\n此外，EPF作为储蓄公积金以利息累积（目前年利率8.25%），退休年龄58岁时可提取。",
+      "dataSource": "数据来源：{source}",
+      "lastVerified": "最后验证：{date}"
+    }
+  },
   "salary": {
     "title": "{country} 工资计算器 {year}",
     "description": "计算扣除税费和社会保险后的实际到手工资。",

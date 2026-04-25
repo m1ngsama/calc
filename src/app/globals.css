@@ -12,6 +12,12 @@
   --color-border: oklch(88% 0.01 260);
 }
 
+@media print {
+  header, footer, nav, .no-print { display: none !important; }
+  main { padding: 0 !important; }
+  body { background: white !important; color: black !important; }
+}
+
 .dark {
   --color-navy: oklch(85% 0.05 260);
   --color-navy-light: oklch(75% 0.05 260);

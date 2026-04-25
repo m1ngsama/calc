@@ -28,7 +28,7 @@ export function RelatedCalculators({
   if (others.length === 0) return null;
 
   return (
-    <div className="mt-8">
+    <div className="mt-8 no-print">
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {others.map((calc) => (
           <Link

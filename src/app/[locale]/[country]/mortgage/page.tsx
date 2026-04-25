@@ -93,7 +93,7 @@ export default async function MortgagePage({
         </div>
         <div className="mt-4 pt-4 border-t border-(--color-border) text-xs text-(--color-text-muted)">
           <p>{t("dataSource")}</p>
-          <p>{t("lastVerified", { date: "2026-04-25" })}</p>
+          <p>{t("lastVerified", { date: new Date().toISOString().slice(0, 10) })}</p>
         </div>
       </Card>
 

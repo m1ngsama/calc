@@ -20,6 +20,7 @@ interface Props {
 export function JapanIncomeTaxForm({ taxData }: Props) {
   const t = useTranslations("japan.incomeTax");
   const [income, setIncome] = useState("");
+  const [filingStatus, setFilingStatus] = useState("single");
   const [result, setResult] = useState<TaxResult | null>(null);
 
   const handleCalculate = () => {
@@ -59,6 +60,8 @@ export function JapanIncomeTaxForm({ taxData }: Props) {
           <div>
             <Label>{t("filingStatus")}</Label>
             <Select
+              value={filingStatus}
+              onChange={(e) => setFilingStatus(e.target.value)}
               options={[
                 { value: "single", label: t("single") },
                 { value: "married", label: t("married") },

@@ -1,21 +1,13 @@
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { countries } from "@/lib/countries";
+import { calcKeyMap } from "@/lib/calculator-labels";
 
 export function Footer() {
   const t = useTranslations("footer");
   const tc = useTranslations("country");
   const tcalc = useTranslations("calculator");
   const locale = useLocale();
-
-  const calcKeyMap: Record<string, string> = {
-    "income-tax": "incometax",
-    salary: "salary",
-    mortgage: "mortgage",
-    vat: "vat",
-    pension: "pension",
-    currency: "currency",
-  };
 
   return (
     <footer className="border-t border-(--color-border) bg-(--color-surface) mt-16">

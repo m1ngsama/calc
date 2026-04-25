@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { alternateLanguages } from "@/lib/seo";
+import { calcKeyMap } from "@/lib/calculator-labels";
 import type { Metadata } from "next";
 
 const VALID_TYPES = [
@@ -16,15 +17,6 @@ const VALID_TYPES = [
   "pension",
   "currency",
 ] as const;
-
-const calcKeyMap: Record<string, string> = {
-  "income-tax": "incometax",
-  salary: "salary",
-  mortgage: "mortgage",
-  vat: "vat",
-  pension: "pension",
-  currency: "currency",
-};
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -39,10 +31,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, type } = await params;
   const tcalc = await getTranslations({ locale, namespace: "calculator" });
+  const th = await getTranslations({ locale, namespace: "home" });
   const calcName = tcalc(calcKeyMap[type] ?? type);
   return {
     title: calcName,
-    description: `Compare ${calcName} across all supported countries. Free, accurate, and private.`,
+    description: th("hubDescription", { calculator: calcName }),
     alternates: alternateLanguages(`/${locale}/calculators/${type}`),
   };
 }

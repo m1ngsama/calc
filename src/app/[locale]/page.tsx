@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { countries } from "@/lib/countries";
+import { calcKeyMap } from "@/lib/calculator-labels";
 import { routing } from "@/i18n/routing";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { alternateLanguages } from "@/lib/seo";
@@ -43,15 +44,6 @@ export default async function HomePage({
     { country: "brazil", calc: "salary", flag: "🇧🇷" },
     { country: "japan", calc: "mortgage", flag: "🇯🇵" },
   ];
-
-  const calcKeyMap: Record<string, string> = {
-    "income-tax": "incometax",
-    salary: "salary",
-    mortgage: "mortgage",
-    vat: "vat",
-    pension: "pension",
-    currency: "currency",
-  };
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">

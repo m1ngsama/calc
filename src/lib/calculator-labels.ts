@@ -1,12 +1,16 @@
+export const calcKeyMap: Record<string, string> = {
+  "income-tax": "incometax",
+  salary: "salary",
+  mortgage: "mortgage",
+  vat: "vat",
+  pension: "pension",
+  currency: "currency",
+};
+
 export function getCalculatorLabels(
   tcalc: (key: string) => string
 ): Record<string, string> {
-  return {
-    "income-tax": tcalc("incometax"),
-    salary: tcalc("salary"),
-    mortgage: tcalc("mortgage"),
-    vat: tcalc("vat"),
-    pension: tcalc("pension"),
-    currency: tcalc("currency"),
-  };
+  return Object.fromEntries(
+    Object.entries(calcKeyMap).map(([slug, key]) => [slug, tcalc(key)])
+  );
 }

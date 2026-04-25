@@ -5,6 +5,7 @@ import { countries, countryIds } from "@/lib/countries";
 import { routing } from "@/i18n/routing";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { alternateLanguages } from "@/lib/seo";
+import { calcKeyMap } from "@/lib/calculator-labels";
 import type { Metadata } from "next";
 
 const calculatorIcons: Record<string, string> = {
@@ -52,14 +53,9 @@ export default async function CountryPage({
   const tcalc = await getTranslations({ locale, namespace: "calculator" });
   const th = await getTranslations({ locale, namespace: "home" });
 
-  const calculatorLabels: Record<string, string> = {
-    "income-tax": tcalc("incometax"),
-    salary: tcalc("salary"),
-    mortgage: tcalc("mortgage"),
-    vat: tcalc("vat"),
-    pension: tcalc("pension"),
-    currency: tcalc("currency"),
-  };
+  const calculatorLabels = Object.fromEntries(
+    Object.entries(calcKeyMap).map(([slug, key]) => [slug, tcalc(key)])
+  );
 
   const countryName = tc(countryId);
 
@@ -69,9 +65,9 @@ export default async function CountryPage({
         data={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          name: `${countryName} Financial Calculators`,
+          name: th("countryTitle", { country: countryName }),
           url: `https://calc.m1ng.space/${locale}/${countryId}`,
-          description: `Free financial calculators for ${countryName}`,
+          description: th("countryDescription", { country: countryName }),
           inLanguage: locale === "zh" ? "zh-CN" : "en",
         }}
       />

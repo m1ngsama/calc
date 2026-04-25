@@ -14,6 +14,12 @@ export function BreakdownTable({
   return (
     <div className="overflow-hidden rounded-lg border border-(--color-border)">
       <table className="w-full text-sm">
+        <thead className="sr-only">
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
         <tbody>
           {items.map((item) => (
             <tr key={item.label} className="border-b border-(--color-border)">

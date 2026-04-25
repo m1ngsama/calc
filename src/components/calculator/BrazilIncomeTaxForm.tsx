@@ -22,10 +22,16 @@ export function BrazilIncomeTaxForm({ taxData }: Props) {
   const [income, setIncome] = useState("");
   const [dependents, setDependents] = useState("0");
   const [result, setResult] = useState<ReturnType<typeof calculateBrazilIncomeTax> | null>(null);
+  const [error, setError] = useState(false);
 
   const handleCalculate = () => {
     const monthlyIncome = parseInt(income.replace(/[^0-9]/g, ""), 10);
-    if (!monthlyIncome || monthlyIncome <= 0) return;
+    if (!monthlyIncome || monthlyIncome <= 0) {
+      setError(true);
+      setTimeout(() => setError(false), 1500);
+      return;
+    }
+    setError(false);
     setResult(
       calculateBrazilIncomeTax(
         {
@@ -58,7 +64,9 @@ export function BrazilIncomeTaxForm({ taxData }: Props) {
               value={income}
               onChange={(e) => setIncome(e.target.value)}
               placeholder="5,000"
+              numeric
               inputMode="numeric"
+              error={error}
             />
           </div>
 
@@ -86,7 +94,7 @@ export function BrazilIncomeTaxForm({ taxData }: Props) {
               <p className="text-sm text-(--color-text-muted) mb-1">
                 {t("takeHomePay")}
               </p>
-              <p className="text-4xl font-bold font-mono text-green-600">
+              <p className="text-4xl font-bold font-mono text-(--color-success)">
                 {fmt(result.netIncome)}
               </p>
               <p className="text-sm text-(--color-text-muted) mt-1">

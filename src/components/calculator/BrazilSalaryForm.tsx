@@ -23,10 +23,16 @@ export function BrazilSalaryForm({ taxData }: Props) {
   const [amount, setAmount] = useState("");
   const [mode, setMode] = useState("monthly");
   const [result, setResult] = useState<ReturnType<typeof calculateBrazilIncomeTax> | null>(null);
+  const [error, setError] = useState(false);
 
   const handleCalculate = () => {
     const raw = parseInt(amount.replace(/[^0-9]/g, ""), 10);
-    if (!raw || raw <= 0) return;
+    if (!raw || raw <= 0) {
+      setError(true);
+      setTimeout(() => setError(false), 1500);
+      return;
+    }
+    setError(false);
     const monthly = mode === "monthly" ? raw : Math.round(raw / 12);
     setResult(
       calculateBrazilIncomeTax({ monthlyIncome: monthly, dependents: 0 }, taxData)
@@ -65,7 +71,9 @@ export function BrazilSalaryForm({ taxData }: Props) {
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               placeholder={mode === "monthly" ? "5,000" : "60,000"}
+              numeric
               inputMode="numeric"
+              error={error}
             />
           </div>
           <Button onClick={handleCalculate} className="w-full">
@@ -79,7 +87,7 @@ export function BrazilSalaryForm({ taxData }: Props) {
           <Card>
             <div className="text-center mb-6">
               <p className="text-sm text-(--color-text-muted) mb-1">{t("monthlyTakeHome")}</p>
-              <p className="text-4xl font-bold font-mono text-green-600">
+              <p className="text-4xl font-bold font-mono text-(--color-success)">
                 {fmt(result.netIncome)}
               </p>
               <p className="text-sm text-(--color-text-muted) mt-1">
@@ -106,7 +114,7 @@ export function BrazilSalaryForm({ taxData }: Props) {
             />
             <div className="mt-4 p-3 rounded-lg bg-(--color-surface-alt) flex justify-between">
               <span className="font-semibold text-(--color-text)">{t("netPay")}</span>
-              <span className="font-bold font-mono text-green-600">{fmt(result.netIncome)}</span>
+              <span className="font-bold font-mono text-(--color-success)">{fmt(result.netIncome)}</span>
             </div>
           </Card>
         </>

@@ -31,12 +31,20 @@ export function JapanPensionForm({ pensionData }: Props) {
   const [claimAge, setClaimAge] = useState("65");
   const [result, setResult] =
     useState<ReturnType<typeof calculatePension> | null>(null);
+  const [error, setError] = useState(false);
 
   const handleCalculate = () => {
+    const incomeValue = parseInt(annualIncome.replace(/[^0-9]/g, ""), 10);
+    if (!incomeValue || incomeValue <= 0) {
+      setError(true);
+      setTimeout(() => setError(false), 1500);
+      return;
+    }
+    setError(false);
     const input: PensionInput = {
       pensionType,
       currentAge: parseInt(currentAge, 10) || 35,
-      annualIncome: parseInt(annualIncome.replace(/[^0-9]/g, ""), 10) || 0,
+      annualIncome: incomeValue,
       contributedYears: parseInt(contributedYears, 10) || 0,
       claimAge: parseInt(claimAge, 10) || 65,
     };
@@ -118,7 +126,9 @@ export function JapanPensionForm({ pensionData }: Props) {
                 value={annualIncome}
                 onChange={(e) => setAnnualIncome(e.target.value)}
                 placeholder="5,000,000"
-                inputMode="numeric"
+                numeric
+              inputMode="numeric"
+              error={error}
               />
             </div>
           )}

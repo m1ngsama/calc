@@ -79,7 +79,7 @@ export default async function CalculatorHubPage({
         }}
       />
 
-      <h1 className="text-3xl font-bold text-(--color-navy) mb-2">{calcName}</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-(--color-navy) mb-3">{calcName}</h1>
       <p className="text-(--color-text-muted) mb-10">
         {th("hubDescription", { calculator: calcName })}
       </p>

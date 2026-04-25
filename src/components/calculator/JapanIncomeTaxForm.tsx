@@ -22,10 +22,16 @@ export function JapanIncomeTaxForm({ taxData }: Props) {
   const [income, setIncome] = useState("");
   const [filingStatus, setFilingStatus] = useState("single");
   const [result, setResult] = useState<TaxResult | null>(null);
+  const [error, setError] = useState(false);
 
   const handleCalculate = () => {
     const gross = parseInt(income.replace(/[^0-9]/g, ""), 10);
-    if (!gross || gross <= 0) return;
+    if (!gross || gross <= 0) {
+      setError(true);
+      setTimeout(() => setError(false), 1500);
+      return;
+    }
+    setError(false);
     setResult(calculateJapanIncomeTax(gross, taxData));
   };
 
@@ -53,7 +59,9 @@ export function JapanIncomeTaxForm({ taxData }: Props) {
               value={income}
               onChange={(e) => setIncome(e.target.value)}
               placeholder="5,000,000"
+              numeric
               inputMode="numeric"
+              error={error}
             />
           </div>
 
@@ -82,7 +90,7 @@ export function JapanIncomeTaxForm({ taxData }: Props) {
               <p className="text-sm text-(--color-text-muted) mb-1">
                 {t("takeHomePay")}
               </p>
-              <p className="text-4xl font-bold font-mono text-green-600">
+              <p className="text-4xl font-bold font-mono text-(--color-success)">
                 {fmt(result.takeHomePay)}
               </p>
               <p className="text-sm text-(--color-text-muted) mt-1">

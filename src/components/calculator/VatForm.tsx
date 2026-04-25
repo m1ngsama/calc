@@ -24,10 +24,16 @@ export function VatForm({ vatData, currency, currencySymbol }: Props) {
   const [rate, setRate] = useState(String(vatData.standardRate));
   const [operation, setOperation] = useState<"add" | "remove">("add");
   const [result, setResult] = useState<ReturnType<typeof calculateVat> | null>(null);
+  const [error, setError] = useState(false);
 
   const handleCalculate = () => {
     const value = parseInt(amount.replace(/[^0-9]/g, ""), 10);
-    if (!value || value <= 0) return;
+    if (!value || value <= 0) {
+      setError(true);
+      setTimeout(() => setError(false), 1500);
+      return;
+    }
+    setError(false);
     setResult(calculateVat(value, parseFloat(rate), operation));
   };
 
@@ -52,7 +58,9 @@ export function VatForm({ vatData, currency, currencySymbol }: Props) {
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               placeholder="10,000"
+              numeric
               inputMode="numeric"
+              error={error}
             />
           </div>
           <div>

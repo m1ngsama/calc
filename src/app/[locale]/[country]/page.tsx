@@ -71,7 +71,7 @@ export default async function CountryPage({
           inLanguage: locale === "zh" ? "zh-CN" : "en",
         }}
       />
-      <h1 className="text-3xl font-bold text-(--color-navy) mb-2">
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-(--color-navy) mb-3">
         {country.flag} {countryName}
       </h1>
       <p className="text-(--color-text-muted) mb-8">

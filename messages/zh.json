@@ -48,7 +48,8 @@
     "mortgage": "房贷计算器",
     "vat": "增值税计算器",
     "pension": "养老金计算器",
-    "currency": "汇率换算"
+    "currency": "汇率换算",
+    "print": "打印"
   },
   "japan": {
     "incomeTax": {

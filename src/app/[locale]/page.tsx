@@ -68,16 +68,20 @@ export default async function HomePage({
           })),
         }}
       />
-      <h1 className="text-3xl font-bold text-(--color-navy) mb-2">
-        {t("title")}
-      </h1>
-      <p className="text-(--color-text-muted) mb-10">{t("subtitle")}</p>
+      <div className="pt-4 pb-12">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-(--color-navy) mb-4">
+          {t("title")}
+        </h1>
+        <p className="text-lg text-(--color-text-muted) max-w-2xl leading-relaxed">
+          {t("subtitle")}
+        </p>
+      </div>
 
-      <h2 className="text-lg font-semibold text-(--color-text) mb-4">
+      <h2 className="text-xl font-semibold text-(--color-text) mb-5">
         {t("pickCountry")}
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {Object.values(countries).map((country) => (
           <Link
             key={country.id}
@@ -97,11 +101,11 @@ export default async function HomePage({
         ))}
       </div>
 
-      <h2 className="text-lg font-semibold text-(--color-text) mt-12 mb-4">
+      <h2 className="text-xl font-semibold text-(--color-text) mt-20 mb-5">
         {t("popularCalculators")}
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {popularCalculators.map(({ country, calc, flag }) => (
           <Link
             key={`${country}-${calc}`}
@@ -116,11 +120,11 @@ export default async function HomePage({
         ))}
       </div>
 
-      <h2 className="text-lg font-semibold text-(--color-text) mt-12 mb-4">
+      <h2 className="text-xl font-semibold text-(--color-text) mt-20 mb-5">
         {t("browseByCalculator")}
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         {Object.keys(calcKeyMap).map((type) => (
           <Link
             key={type}
@@ -132,8 +136,8 @@ export default async function HomePage({
         ))}
       </div>
 
-      <section className="mt-16">
-        <h2 className="text-lg font-semibold text-(--color-text) mb-6">
+      <section className="mt-24">
+        <h2 className="text-xl font-semibold text-(--color-text) mb-6">
           {t("faq")}
         </h2>
         <div className="space-y-4">

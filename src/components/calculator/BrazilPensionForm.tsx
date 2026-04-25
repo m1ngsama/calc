@@ -23,10 +23,18 @@ export function BrazilPensionForm({ pensionData }: Props) {
   const [currentAge, setCurrentAge] = useState("35");
   const [result, setResult] =
     useState<ReturnType<typeof calculateBrazilPension> | null>(null);
+  const [error, setError] = useState(false);
 
   const handleCalculate = () => {
+    const incomeValue = parseInt(monthlyIncome.replace(/[^0-9]/g, ""), 10);
+    if (!incomeValue || incomeValue <= 0) {
+      setError(true);
+      setTimeout(() => setError(false), 1500);
+      return;
+    }
+    setError(false);
     const input = {
-      monthlyIncome: parseInt(monthlyIncome.replace(/[^0-9]/g, ""), 10) || 0,
+      monthlyIncome: incomeValue,
       gender,
       contributedYears: parseInt(contributedYears, 10) || 0,
       currentAge: parseInt(currentAge, 10) || 35,
@@ -50,10 +58,12 @@ export function BrazilPensionForm({ pensionData }: Props) {
             <Input
               type="text"
               prefix="R$"
+              numeric
               inputMode="numeric"
               value={monthlyIncome}
               onChange={(e) => setMonthlyIncome(e.target.value)}
               placeholder="5,000"
+              error={error}
             />
           </div>
 

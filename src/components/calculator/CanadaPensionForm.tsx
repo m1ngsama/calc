@@ -25,10 +25,18 @@ export function CanadaPensionForm({ pensionData }: Props) {
   const [claimAge, setClaimAge] = useState("65");
   const [result, setResult] =
     useState<ReturnType<typeof calculateCanadaPension> | null>(null);
+  const [error, setError] = useState(false);
 
   const handleCalculate = () => {
+    const incomeValue = parseInt(annualIncome.replace(/[^0-9]/g, ""), 10);
+    if (!incomeValue || incomeValue <= 0) {
+      setError(true);
+      setTimeout(() => setError(false), 1500);
+      return;
+    }
+    setError(false);
     const input = {
-      annualIncome: parseInt(annualIncome.replace(/[^0-9]/g, ""), 10) || 0,
+      annualIncome: incomeValue,
       currentAge: parseInt(currentAge, 10) || 45,
       contributedYears: parseInt(contributedYears, 10) || 0,
       claimAge: parseInt(claimAge, 10) || 65,
@@ -58,10 +66,12 @@ export function CanadaPensionForm({ pensionData }: Props) {
             <Input
               type="text"
               prefix="$"
+              numeric
               inputMode="numeric"
               value={annualIncome}
               onChange={(e) => setAnnualIncome(e.target.value)}
               placeholder="70,000"
+              error={error}
             />
           </div>
 

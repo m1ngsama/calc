@@ -48,7 +48,8 @@
     "mortgage": "Mortgage Calculator",
     "vat": "VAT Calculator",
     "pension": "Pension Calculator",
-    "currency": "Currency Converter"
+    "currency": "Currency Converter",
+    "print": "Print"
   },
   "japan": {
     "incomeTax": {

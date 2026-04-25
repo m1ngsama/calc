@@ -12,6 +12,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { RelatedCalculators } from "@/components/calculator/RelatedCalculators";
 import { alternateLanguages } from "@/lib/seo";
+import { PrintButton } from "@/components/ui/PrintButton";
 import { getCalculatorLabels } from "@/lib/calculator-labels";
 import type { Metadata } from "next";
 
@@ -82,7 +83,7 @@ export default async function SalaryPage({
           inLanguage: locale === "zh" ? "zh-CN" : "en",
         }}
       />
-      <h1 className="text-3xl font-bold text-(--color-navy) mb-2">
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-(--color-navy) mb-3">
         {t("title", { country: countryName, year: 2026 })}
       </h1>
       <p className="text-(--color-text-muted) mb-8">{t("description")}</p>
@@ -92,6 +93,10 @@ export default async function SalaryPage({
       {countryId === "brazil" && <BrazilSalaryForm taxData={taxData} />}
       {countryId === "india" && <IndiaSalaryForm taxData={taxData} />}
       {countryId === "canada" && <CanadaSalaryForm taxData={taxData} />}
+
+      <div className="flex justify-end mt-4">
+        <PrintButton />
+      </div>
 
       <Card className="mt-8">
         <h2 className="text-lg font-semibold text-(--color-text) mb-3">

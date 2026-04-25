@@ -23,12 +23,18 @@ export function MortgageForm({ currency, currencySymbol }: Props) {
   const [rate, setRate] = useState("1.5");
   const [term, setTerm] = useState("35");
   const [result, setResult] = useState<ReturnType<typeof calculateMortgage> | null>(null);
+  const [error, setError] = useState(false);
 
   const handleCalculate = () => {
     const p = parseInt(principal.replace(/[^0-9]/g, ""), 10);
     const r = parseFloat(rate);
     const y = parseInt(term, 10);
-    if (!p || !r || !y || p <= 0 || r <= 0 || y <= 0) return;
+    if (!p || !r || !y || p <= 0 || r <= 0 || y <= 0) {
+      setError(true);
+      setTimeout(() => setError(false), 1500);
+      return;
+    }
+    setError(false);
     setResult(calculateMortgage({ principal: p, annualRate: r, termYears: y }));
   };
 
@@ -53,7 +59,9 @@ export function MortgageForm({ currency, currencySymbol }: Props) {
               value={principal}
               onChange={(e) => setPrincipal(e.target.value)}
               placeholder="30,000,000"
+              numeric
               inputMode="numeric"
+              error={error}
             />
           </div>
           <div className="grid grid-cols-2 gap-4">

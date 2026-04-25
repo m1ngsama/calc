@@ -24,10 +24,18 @@ export function IndiaPensionForm({ pensionData }: Props) {
   const [serviceYears, setServiceYears] = useState("5");
   const [result, setResult] =
     useState<ReturnType<typeof calculateIndiaPension> | null>(null);
+  const [error, setError] = useState(false);
 
   const handleCalculate = () => {
+    const salaryValue = parseInt(monthlySalary.replace(/[^0-9]/g, ""), 10);
+    if (!salaryValue || salaryValue <= 0) {
+      setError(true);
+      setTimeout(() => setError(false), 1500);
+      return;
+    }
+    setError(false);
     const input = {
-      monthlySalary: parseInt(monthlySalary.replace(/[^0-9]/g, ""), 10) || 0,
+      monthlySalary: salaryValue,
       currentAge: parseInt(currentAge, 10) || 35,
       serviceYears: parseInt(serviceYears, 10) || 0,
     };
@@ -45,10 +53,12 @@ export function IndiaPensionForm({ pensionData }: Props) {
             <Input
               type="text"
               prefix="₹"
+              numeric
               inputMode="numeric"
               value={monthlySalary}
               onChange={(e) => setMonthlySalary(e.target.value)}
               placeholder="25,000"
+              error={error}
             />
           </div>
 

@@ -9,6 +9,10 @@
     "selectCountry": "选择国家",
     "selectLanguage": "语言"
   },
+  "notFound": {
+    "message": "页面未找到。您查找的计算器不存在。",
+    "backHome": "返回 CalcHub"
+  },
   "home": {
     "title": "各国金融计算器",
     "subtitle": "精确、免费、保护隐私。所有计算在浏览器中完成。",

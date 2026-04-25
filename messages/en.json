@@ -9,6 +9,10 @@
     "selectCountry": "Select Country",
     "selectLanguage": "Language"
   },
+  "notFound": {
+    "message": "Page not found. The calculator you're looking for doesn't exist.",
+    "backHome": "Back to CalcHub"
+  },
   "home": {
     "title": "Financial Calculators by Country",
     "subtitle": "Accurate, free, and private. All calculations run in your browser.",

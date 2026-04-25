@@ -1,0 +1,15 @@
+{
+  "taxYear": 2025,
+  "currency": "EUR",
+  "rentenwert": 40.17,
+  "durchschnittsentgelt": 45358,
+  "beitragsbemessungsgrenze": 96600,
+  "employeeRate": 0.093,
+  "normalRetirementAge": 67,
+  "earlyClaimPenaltyPerMonth": 0.003,
+  "deferralBonusPerMonth": 0.005,
+  "earliestClaimAge": 63,
+  "minQualifyingYears": 5,
+  "source": "https://www.deutsche-rentenversicherung.de",
+  "lastVerified": "2026-04-25"
+}

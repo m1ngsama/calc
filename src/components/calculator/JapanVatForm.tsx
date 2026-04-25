@@ -59,8 +59,8 @@ export function JapanVatForm({ vatData }: Props) {
               value={rate}
               onChange={(e) => setRate(e.target.value)}
               options={[
-                { value: String(vatData.standardRate), label: t("standardRate") },
-                { value: String(vatData.reducedRate), label: t("reducedRate") },
+                { value: String(vatData.standardRate), label: t("standardRate", { rate: (vatData.standardRate * 100).toFixed(0) }) },
+                { value: String(vatData.reducedRate), label: t("reducedRate", { rate: (vatData.reducedRate * 100).toFixed(0) }) },
               ]}
             />
           </div>

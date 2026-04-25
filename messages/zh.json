@@ -63,7 +63,71 @@
       "howItWorksContent": "日本的消费税（消費税）适用于大多数商品和服务，标准税率为10%。食品和非酒精饮料（不含外食）以及报纸订阅适用8%的轻减税率。\n\n消费税于2019年10月从8%提高至10%，同时引入轻减税率制度。商家被要求以含税价格标示商品价格。\n\n对于企业间交易，发票制度（インボイス制度）要求使用合格发票才能申请进项税额抵扣。"
     },
     "pension": {
+      "title": "日本年金计算器 {year}",
+      "description": "根据您的缴费情况，估算国民年金和厚生年金的未来领取金额。",
       "howItWorksContent": "日本的公共年金制度分为两层。国民年金（基础年金）覆盖所有20-59岁居民，每月缴费16,980日元。缴满40年后，65岁起每年可领取基础年金816,000日元（每月68,000日元）。\n\n加入社会保险的企业员工还需缴纳厚生年金。缴费率为标准报酬月额的18.3%，由雇主和雇员各负担一半。领取额计算公式为：平均标准报酬月额 × 5.481/1000 × 加入月数。\n\n年金可以从60岁起提前领取（每月减少0.4%），也可以延迟到75岁领取（每月增加0.7%）。延迟到70岁领取可增加42%。"
+    }
+  },
+  "germany": {
+    "incomeTax": {
+      "title": "德国个人所得税计算器 {year}",
+      "description": "根据德国联邦财政部（BMF）官方公式，计算您的所得税、团结附加税和社会保险费。",
+      "annualIncome": "年收入（税前）",
+      "taxClass": "税级",
+      "class1": "第一类（单身）",
+      "class3": "第三类（已婚，高收入方）",
+      "class4": "第四类（已婚，收入相当）",
+      "class5": "第五类（已婚，低收入方）",
+      "churchMember": "教会税成员",
+      "yes": "是",
+      "no": "否",
+      "hasChildren": "有子女",
+      "calculate": "计算税额",
+      "results": "税额明细",
+      "takeHomePay": "到手收入",
+      "perMonth": "每月",
+      "perYear": "每年",
+      "incomeTax": "所得税（Einkommensteuer）",
+      "solidaritySurcharge": "团结附加税（Soli）",
+      "churchTax": "教会税（Kirchensteuer）",
+      "healthInsurance": "医疗保险（Krankenversicherung）",
+      "pensionInsurance": "养老保险（Rentenversicherung）",
+      "unemploymentInsurance": "失业保险",
+      "longTermCareInsurance": "长期护理保险（Pflegeversicherung）",
+      "socialInsurance": "社会保险",
+      "effectiveRate": "实际税率",
+      "howItWorks": "德国所得税制度详解",
+      "howItWorksContent": "德国采用公式累进所得税制度。与阶梯税率不同，税率在每个区间内连续递增。基本免税额（Grundfreibetrag）为11,604欧元。此后税率从14%通过两个累进区间上升至最高42%，超过277,826欧元的收入适用45%的附加税率。\n\n团结附加税（Solidaritätszuschlag）为所得税的5.5%，但约90%的纳税人可获豁免。教会税（所得税的8-9%）仅对已登记的教会成员征收。\n\n社会保险包括医疗保险、养老保险、失业保险和长期护理保险。各险种有各自的缴费上限。雇员的社会保险总缴费约占工资总额的20%，雇主承担大致相等的份额。",
+      "dataSource": "数据来源：德国联邦财政部（BMF）",
+      "lastVerified": "最后验证：{date}"
+    },
+    "salary": {
+      "howItWorksContent": "德国工资需缴纳所得税（Einkommensteuer）、团结附加税（Solidaritätszuschlag）和四种社会保险。雇主每月代扣所有款项。\n\n社会保险包括医疗保险（Krankenversicherung，雇员约8.2%）、养老保险（Rentenversicherung，9.3%）、失业保险（Arbeitslosenversicherung，1.3%）和长期护理保险（Pflegeversicherung，1.7-2.3%）。每种保险有各自的收入上限。\n\n此处显示的到手工资仅为雇员承担部分。雇主在您的工资总额之上额外为每种社会保险缴纳大致相等的金额。"
+    },
+    "vat": {
+      "howItWorksContent": "德国增值税（Mehrwertsteuer/Umsatzsteuer）适用于大多数商品和服务，标准税率为19%。食品、书籍、报纸、本地公共交通、酒店住宿和文化活动适用7%的优惠税率。\n\n商家必须向消费者显示含税价格。增值税采用进项税抵扣机制，企业可以从销售收取的增值税中扣除采购支付的增值税。\n\n年营业额低于22,000欧元的小型企业可以选择小规模企业免税（Kleinunternehmerregelung），无需收取增值税。"
+    },
+    "pension": {
+      "title": "德国养老金计算器 {year}",
+      "description": "根据您的收入和缴费历史，估算未来的德国法定养老金（gesetzliche Rente）。",
+      "annualIncome": "年收入（税前）",
+      "contributedYears": "已缴纳年数",
+      "currentAge": "当前年龄",
+      "claimAge": "计划退休年龄",
+      "calculate": "估算养老金",
+      "results": "养老金估算结果",
+      "monthlyBenefit": "退休后月养老金",
+      "annualBenefit": "退休后年养老金",
+      "totalPoints": "养老金积分总数（Entgeltpunkte）",
+      "pointsPerYear": "每年获得积分",
+      "currentContribution": "当前每月缴费（个人负担）",
+      "claimAgeAdjustment": "领取年龄调整",
+      "earlyPenalty": "提前领取减额",
+      "deferralBonus": "延迟领取增额",
+      "noAdjustment": "标准（无调整）",
+      "howItWorksContent": "德国法定养老金（gesetzliche Rentenversicherung）基于积分制度。每年根据您的收入相对于全国平均收入（Durchschnittsentgelt，2025年为45,358欧元）获得养老金积分。收入等于平均水平可获得1.0积分。\n\n月养老金计算公式为：总积分 × 领取系数 × 养老金类型系数 × 当前积分值（Rentenwert，2025年为40.17欧元/月）。标准退休年龄领取时，领取系数和类型系数均为1.0。\n\n标准退休年龄为67岁（1964年及以后出生者）。可从63岁起提前领取，每月减少0.3%；或延迟至67岁以后，每月增加0.5%。",
+      "dataSource": "数据来源：德国养老保险（Deutsche Rentenversicherung）",
+      "lastVerified": "最后验证：{date}"
     }
   },
   "salary": {
@@ -159,11 +223,11 @@
   },
   "vat": {
     "title": "{country} 消费税计算器 {year}",
-    "description": "计算消费税（消費税）。可按标准税率10%或轻减税率8%加税或去税。",
+    "description": "计算增值税/消费税。可按标准税率或优惠税率加税或去税。",
     "amount": "金额",
     "rate": "税率",
-    "standardRate": "标准税率 (10%)",
-    "reducedRate": "轻减税率 (8%)",
+    "standardRate": "标准税率 ({rate}%)",
+    "reducedRate": "优惠税率 ({rate}%)",
     "operation": "计算方式",
     "addTax": "加税（含税价）",
     "removeTax": "去税（从含税价提取）",

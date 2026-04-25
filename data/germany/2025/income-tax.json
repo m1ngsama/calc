@@ -1,0 +1,51 @@
+{
+  "taxYear": 2025,
+  "currency": "EUR",
+  "zones": [
+    { "id": 1, "min": 0, "max": 11604, "type": "zero" },
+    {
+      "id": 2, "min": 11605, "max": 17005, "type": "progressive",
+      "baseOffset": 11604, "divisor": 10000,
+      "a": 979.18, "b": 1400, "c": 0
+    },
+    {
+      "id": 3, "min": 17006, "max": 66760, "type": "progressive",
+      "baseOffset": 17005, "divisor": 10000,
+      "a": 192.59, "b": 2397, "c": 966.53
+    },
+    { "id": 4, "min": 66761, "max": 277825, "type": "linear", "rate": 0.42, "offset": 10602.13 },
+    { "id": 5, "min": 277826, "max": null, "type": "linear", "rate": 0.45, "offset": 18936.88 }
+  ],
+  "solidaritySurcharge": {
+    "rate": 0.055,
+    "exemptionThreshold": 18130,
+    "mitigationCeiling": 34245,
+    "mitigationRate": 0.119
+  },
+  "churchTax": {
+    "standardRate": 0.09,
+    "bavariaRate": 0.08
+  },
+  "socialInsurance": {
+    "healthInsurance": {
+      "employeeRate": 0.073,
+      "supplementaryRate": 0.009,
+      "annualCeiling": 66150
+    },
+    "pensionInsurance": {
+      "employeeRate": 0.093,
+      "annualCeiling": 96600
+    },
+    "unemploymentInsurance": {
+      "employeeRate": 0.013,
+      "annualCeiling": 96600
+    },
+    "longTermCareInsurance": {
+      "employeeRate": 0.017,
+      "childlessSurcharge": 0.006,
+      "annualCeiling": 66150
+    }
+  },
+  "source": "https://www.bundesfinanzministerium.de",
+  "lastVerified": "2026-04-25"
+}

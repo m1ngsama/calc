@@ -1,0 +1,9 @@
+{
+  "taxYear": 2025,
+  "currency": "EUR",
+  "standardRate": 0.19,
+  "reducedRate": 0.07,
+  "reducedRateItems": "Food, books, newspapers, local public transport, hotel accommodation, cultural events, water supply",
+  "source": "https://www.gesetze-im-internet.de/ustg_1980/__12.html",
+  "lastVerified": "2026-04-25"
+}

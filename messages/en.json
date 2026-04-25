@@ -63,7 +63,71 @@
       "howItWorksContent": "Japan's consumption tax (消費税) applies to most goods and services at a standard rate of 10%. A reduced rate of 8% applies to food and non-alcoholic beverages (excluding dining out) and newspaper subscriptions.\n\nThe consumption tax was last raised from 8% to 10% in October 2019, with the reduced rate introduced simultaneously. Businesses are required to display tax-inclusive prices.\n\nFor business-to-business transactions, the Invoice System (インボイス制度) requires qualified invoices for input tax credit claims."
     },
     "pension": {
+      "title": "Japan Pension Calculator {year}",
+      "description": "Estimate your future pension benefits from National Pension (国民年金) and Employees' Pension (厚生年金) based on your contributions.",
       "howItWorksContent": "Japan's public pension system has two tiers. The National Pension (国民年金/Kokumin Nenkin) covers all residents aged 20-59 with a flat monthly contribution of ¥16,980. After 40 years of full contributions, the basic pension pays ¥816,000 per year (¥68,000/month) from age 65.\n\nEmployees enrolled in social insurance also contribute to the Employees' Pension (厚生年金/Kousei Nenkin). The contribution rate is 18.3% of standard monthly remuneration, split equally between employer and employee. The benefit is calculated as: average monthly remuneration × 5.481/1000 × contribution months.\n\nYou can claim your pension early from age 60 (with a 0.4% reduction per month) or defer up to age 75 (with a 0.7% increase per month). Deferring to 70 increases your pension by 42%."
+    }
+  },
+  "germany": {
+    "incomeTax": {
+      "title": "Germany Income Tax Calculator {year}",
+      "description": "Calculate your German income tax (Einkommensteuer), solidarity surcharge, and social insurance contributions based on official BMF formulas.",
+      "annualIncome": "Annual Gross Income",
+      "taxClass": "Tax Class",
+      "class1": "Class I (Single)",
+      "class3": "Class III (Married, higher earner)",
+      "class4": "Class IV (Married, equal earners)",
+      "class5": "Class V (Married, lower earner)",
+      "churchMember": "Church Tax Member",
+      "yes": "Yes",
+      "no": "No",
+      "hasChildren": "Has Children",
+      "calculate": "Calculate Tax",
+      "results": "Tax Breakdown",
+      "takeHomePay": "Take-Home Pay",
+      "perMonth": "per month",
+      "perYear": "per year",
+      "incomeTax": "Income Tax (Einkommensteuer)",
+      "solidaritySurcharge": "Solidarity Surcharge (Soli)",
+      "churchTax": "Church Tax (Kirchensteuer)",
+      "healthInsurance": "Health Insurance (Krankenversicherung)",
+      "pensionInsurance": "Pension Insurance (Rentenversicherung)",
+      "unemploymentInsurance": "Unemployment Insurance",
+      "longTermCareInsurance": "Long-Term Care Insurance (Pflegeversicherung)",
+      "socialInsurance": "Social Insurance",
+      "effectiveRate": "Effective Tax Rate",
+      "howItWorks": "How German Income Tax Works",
+      "howItWorksContent": "Germany uses a formula-based progressive income tax system. Unlike bracket systems, tax rates increase continuously within each zone. The basic tax-free allowance (Grundfreibetrag) is €11,604. Above this, rates rise from 14% through two progressive zones to a top rate of 42%, with a surcharge rate of 45% for income above €277,826.\n\nThe solidarity surcharge (Solidaritätszuschlag) of 5.5% applies only to higher earners — about 90% of taxpayers are exempt. Church tax (8-9% of income tax) applies only to registered church members.\n\nSocial insurance contributions cover health insurance, pension, unemployment, and long-term care. Each has its own contribution ceiling. Employees pay roughly 20% of gross salary toward social insurance, with employers matching most contributions.",
+      "dataSource": "Data source: Federal Ministry of Finance (BMF)",
+      "lastVerified": "Last verified: {date}"
+    },
+    "salary": {
+      "howItWorksContent": "German salaries are subject to income tax (Einkommensteuer), solidarity surcharge (Solidaritätszuschlag), and four types of social insurance. Employers withhold all deductions monthly.\n\nSocial insurance includes health insurance (Krankenversicherung, ~8.2% employee share), pension insurance (Rentenversicherung, 9.3%), unemployment insurance (Arbeitslosenversicherung, 1.3%), and long-term care insurance (Pflegeversicherung, 1.7-2.3%). Each type has its own income ceiling.\n\nThe take-home pay shown represents the employee's share. Employers contribute roughly equal amounts for each social insurance type on top of your gross salary."
+    },
+    "vat": {
+      "howItWorksContent": "Germany's value-added tax (Mehrwertsteuer/Umsatzsteuer) applies to most goods and services at a standard rate of 19%. A reduced rate of 7% applies to food, books, newspapers, local public transport, hotel accommodation, and cultural events.\n\nBusinesses must display tax-inclusive prices to consumers. The VAT system uses an input tax credit mechanism where businesses can deduct VAT paid on purchases from VAT collected on sales.\n\nSmall businesses with annual revenue below €22,000 can opt for the small business exemption (Kleinunternehmerregelung) and are not required to charge VAT."
+    },
+    "pension": {
+      "title": "Germany Pension Calculator {year}",
+      "description": "Estimate your future German state pension (gesetzliche Rente) based on your earnings and contribution history.",
+      "annualIncome": "Annual Gross Income",
+      "contributedYears": "Years Already Contributed",
+      "currentAge": "Current Age",
+      "claimAge": "Planned Retirement Age",
+      "calculate": "Estimate Pension",
+      "results": "Pension Estimate",
+      "monthlyBenefit": "Monthly Pension at Claim Age",
+      "annualBenefit": "Annual Pension at Claim Age",
+      "totalPoints": "Total Pension Points (Entgeltpunkte)",
+      "pointsPerYear": "Points Earned Per Year",
+      "currentContribution": "Current Monthly Contribution (Your Share)",
+      "claimAgeAdjustment": "Claim Age Adjustment",
+      "earlyPenalty": "Early claim penalty",
+      "deferralBonus": "Deferral bonus",
+      "noAdjustment": "Standard (no adjustment)",
+      "howItWorksContent": "Germany's state pension (gesetzliche Rentenversicherung) is based on a pension points system. Each year, you earn pension points based on your income relative to the national average (Durchschnittsentgelt, €45,358 in 2025). Earning the average gives you 1.0 point per year.\n\nYour monthly pension is calculated as: total points × access factor × pension type factor × current pension value (Rentenwert, €40.17/month in 2025). For a standard old-age pension claimed at the normal retirement age, the access factor and type factor are both 1.0.\n\nThe standard retirement age is 67 (for those born 1964 or later). You can claim early from age 63 with a 0.3% reduction per month, or defer beyond 67 for a 0.5% increase per month.",
+      "dataSource": "Data source: Deutsche Rentenversicherung",
+      "lastVerified": "Last verified: {date}"
     }
   },
   "salary": {
@@ -159,11 +223,11 @@
   },
   "vat": {
     "title": "{country} VAT Calculator {year}",
-    "description": "Calculate consumption tax (消費税). Add or remove tax at standard 10% or reduced 8% rate.",
+    "description": "Calculate VAT / consumption tax. Add or remove tax at standard or reduced rate.",
     "amount": "Amount",
     "rate": "Tax Rate",
-    "standardRate": "Standard Rate (10%)",
-    "reducedRate": "Reduced Rate (8%)",
+    "standardRate": "Standard Rate ({rate}%)",
+    "reducedRate": "Reduced Rate ({rate}%)",
     "operation": "Operation",
     "addTax": "Add Tax",
     "removeTax": "Remove Tax (extract from total)",

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { countries } from "@/lib/countries";
 import { routing } from "@/i18n/routing";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { alternateLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -19,6 +20,7 @@ export async function generateMetadata({
   return {
     title: t("siteName"),
     description: t("siteDescription"),
+    alternates: alternateLanguages(`/${locale}`),
   };
 }
 
@@ -31,6 +33,25 @@ export default async function HomePage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "home" });
   const tc = await getTranslations({ locale, namespace: "country" });
+  const tcalc = await getTranslations({ locale, namespace: "calculator" });
+
+  const popularCalculators = [
+    { country: "japan", calc: "income-tax", flag: "🇯🇵" },
+    { country: "germany", calc: "income-tax", flag: "🇩🇪" },
+    { country: "canada", calc: "salary", flag: "🇨🇦" },
+    { country: "india", calc: "income-tax", flag: "🇮🇳" },
+    { country: "brazil", calc: "salary", flag: "🇧🇷" },
+    { country: "japan", calc: "mortgage", flag: "🇯🇵" },
+  ];
+
+  const calcKeyMap: Record<string, string> = {
+    "income-tax": "incometax",
+    salary: "salary",
+    mortgage: "mortgage",
+    vat: "vat",
+    pension: "pension",
+    currency: "currency",
+  };
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
@@ -69,6 +90,25 @@ export default async function HomePage({
                 {country.calculators.length} calculators
               </span>
             </div>
+          </Link>
+        ))}
+      </div>
+
+      <h2 className="text-lg font-semibold text-(--color-text) mt-12 mb-4">
+        {t("popularCalculators")}
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {popularCalculators.map(({ country, calc, flag }) => (
+          <Link
+            key={`${country}-${calc}`}
+            href={`/${locale}/${country}/${calc}`}
+            className="flex items-center gap-3 p-3 rounded-lg border border-(--color-border) bg-(--color-surface) hover:border-(--color-accent) transition-colors text-sm"
+          >
+            <span className="text-xl">{flag}</span>
+            <span className="text-(--color-text)">
+              {tc(country)} {tcalc(calcKeyMap[calc])}
+            </span>
           </Link>
         ))}
       </div>

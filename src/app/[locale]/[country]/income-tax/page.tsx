@@ -9,6 +9,7 @@ import { IndiaIncomeTaxForm } from "@/components/calculator/IndiaIncomeTaxForm";
 import { CanadaIncomeTaxForm } from "@/components/calculator/CanadaIncomeTaxForm";
 import { Card } from "@/components/ui/Card";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { alternateLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -30,6 +31,7 @@ export async function generateMetadata({
   return {
     title: `${countryName} Income Tax Calculator 2026 | Free & Accurate | CalcHub`,
     description: `Calculate your ${countryName} income tax for 2026. Based on official government tax brackets. Free, private, no signup required.`,
+    alternates: alternateLanguages(`/${locale}/${countryId}/income-tax`),
   };
 }
 

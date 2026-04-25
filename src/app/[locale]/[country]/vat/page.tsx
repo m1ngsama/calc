@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { VatForm } from "@/components/calculator/VatForm";
 import { Card } from "@/components/ui/Card";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { alternateLanguages } from "@/lib/seo";
 import type { VatData } from "@/calculators/vat";
 import type { Metadata } from "next";
 
@@ -27,6 +28,7 @@ export async function generateMetadata({
   return {
     title: `${countryName} VAT / Sales Tax Calculator 2026 | CalcHub`,
     description: `Calculate VAT and sales tax in ${countryName}. Add or remove tax instantly based on official rates. Free calculator.`,
+    alternates: alternateLanguages(`/${locale}/${countryId}/vat`),
   };
 }
 

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { countries, countryIds } from "@/lib/countries";
 import { routing } from "@/i18n/routing";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { alternateLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 const calculatorIcons: Record<string, string> = {
@@ -32,6 +33,7 @@ export async function generateMetadata({
   return {
     title: `${countryName} Calculators | CalcHub`,
     description: `Free financial calculators for ${countryName}. Income tax, salary, mortgage, and more.`,
+    alternates: alternateLanguages(`/${locale}/${countryId}`),
   };
 }
 

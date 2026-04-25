@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { CurrencyForm } from "@/components/calculator/CurrencyForm";
 import { Card } from "@/components/ui/Card";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { alternateLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -28,6 +29,7 @@ export async function generateMetadata({
   return {
     title: `${countryName} Currency Converter 2026 | ${currencyCode} Exchange Rates`,
     description: `Convert ${currencyCode} to and from major world currencies using live exchange rates. Free currency converter for ${countryName}.`,
+    alternates: alternateLanguages(`/${locale}/${countryId}/currency`),
   };
 }
 

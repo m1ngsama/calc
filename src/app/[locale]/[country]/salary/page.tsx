@@ -9,6 +9,7 @@ import { IndiaSalaryForm } from "@/components/calculator/IndiaSalaryForm";
 import { CanadaSalaryForm } from "@/components/calculator/CanadaSalaryForm";
 import { Card } from "@/components/ui/Card";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { alternateLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -30,6 +31,7 @@ export async function generateMetadata({
   return {
     title: `${countryName} Salary Calculator 2026 | Take-Home Pay`,
     description: `Calculate your take-home salary in ${countryName} after income tax and social insurance. Free, accurate, based on official rates.`,
+    alternates: alternateLanguages(`/${locale}/${countryId}/salary`),
   };
 }
 

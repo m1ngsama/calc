@@ -9,6 +9,7 @@ import { IndiaPensionForm } from "@/components/calculator/IndiaPensionForm";
 import { CanadaPensionForm } from "@/components/calculator/CanadaPensionForm";
 import { Card } from "@/components/ui/Card";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { alternateLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -31,6 +32,7 @@ export async function generateMetadata({
   return {
     title: `${countryName} Pension Calculator 2026 | CalcHub`,
     description: tj("description"),
+    alternates: alternateLanguages(`/${locale}/${countryId}/pension`),
   };
 }
 

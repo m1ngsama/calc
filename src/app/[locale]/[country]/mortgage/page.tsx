@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { MortgageForm } from "@/components/calculator/MortgageForm";
 import { Card } from "@/components/ui/Card";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { alternateLanguages } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -26,6 +27,7 @@ export async function generateMetadata({
   return {
     title: `${countryName} Mortgage Calculator 2026 | Monthly Payment & Amortization`,
     description: `Calculate your mortgage payment in ${countryName}. See monthly payments, total interest, and full amortization schedule. Free, no signup.`,
+    alternates: alternateLanguages(`/${locale}/${countryId}/mortgage`),
   };
 }
 

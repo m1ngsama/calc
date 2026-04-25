@@ -47,7 +47,7 @@ export function TaxPieChart({
             ))}
           </Pie>
           <Tooltip
-            formatter={(value: number) => formatAmount(value)}
+            formatter={(value) => formatAmount(Number(value))}
             contentStyle={{
               borderRadius: "8px",
               border: "1px solid var(--color-border)",

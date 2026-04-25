@@ -27,10 +27,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, country: countryId } = await params;
   const tc = await getTranslations({ locale, namespace: "country" });
+  const t = await getTranslations({ locale, namespace: "vat" });
   const countryName = tc(countryId);
   return {
-    title: `${countryName} VAT / Sales Tax Calculator 2026 | CalcHub`,
-    description: `Calculate VAT and sales tax in ${countryName}. Add or remove tax instantly based on official rates. Free calculator.`,
+    title: t("title", { country: countryName, year: 2026 }),
+    description: t("description"),
     alternates: alternateLanguages(`/${locale}/${countryId}/vat`),
   };
 }

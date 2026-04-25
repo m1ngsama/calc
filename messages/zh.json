@@ -21,6 +21,8 @@
     "calculatorCount": "{count} 个计算器",
     "financialCalculators": "金融计算器",
     "faq": "常见问题",
+    "countryTitle": "{country}计算器",
+    "countryDescription": "免费的{country}金融计算器。个人所得税、工资、房贷等。",
     "faqQ1": "这些计算器免费吗？",
     "faqA1": "是的，CalcHub 的所有计算器完全免费使用，无需注册。",
     "faqQ2": "计算结果准确吗？",

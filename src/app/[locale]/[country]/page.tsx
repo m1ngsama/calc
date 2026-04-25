@@ -29,10 +29,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, country: countryId } = await params;
   const tc = await getTranslations({ locale, namespace: "country" });
+  const th = await getTranslations({ locale, namespace: "home" });
   const countryName = tc(countryId);
   return {
-    title: `${countryName} Calculators | CalcHub`,
-    description: `Free financial calculators for ${countryName}. Income tax, salary, mortgage, and more.`,
+    title: th("countryTitle", { country: countryName }),
+    description: th("countryDescription", { country: countryName }),
     alternates: alternateLanguages(`/${locale}/${countryId}`),
   };
 }

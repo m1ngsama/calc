@@ -30,10 +30,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, country: countryId } = await params;
   const tc = await getTranslations({ locale, namespace: "country" });
+  const t = await getTranslations({ locale, namespace: "salary" });
   const countryName = tc(countryId);
   return {
-    title: `${countryName} Salary Calculator 2026 | Take-Home Pay`,
-    description: `Calculate your take-home salary in ${countryName} after income tax and social insurance. Free, accurate, based on official rates.`,
+    title: t("title", { country: countryName, year: 2026 }),
+    description: t("description"),
     alternates: alternateLanguages(`/${locale}/${countryId}/salary`),
   };
 }

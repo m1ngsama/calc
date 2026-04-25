@@ -21,6 +21,8 @@
     "calculatorCount": "{count} calculators",
     "financialCalculators": "Financial Calculators",
     "faq": "Frequently Asked Questions",
+    "countryTitle": "{country} Calculators",
+    "countryDescription": "Free financial calculators for {country}. Income tax, salary, mortgage, and more.",
     "faqQ1": "Are these calculators free?",
     "faqA1": "Yes, all CalcHub calculators are completely free to use. No registration required.",
     "faqQ2": "How accurate are the calculations?",

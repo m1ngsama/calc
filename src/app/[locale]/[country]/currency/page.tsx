@@ -27,11 +27,11 @@ export async function generateMetadata({
   const { locale, country: countryId } = await params;
   const country = countries[countryId];
   const tc = await getTranslations({ locale, namespace: "country" });
+  const t = await getTranslations({ locale, namespace: "currency" });
   const countryName = tc(countryId);
-  const currencyCode = country?.currency ?? "";
   return {
-    title: `${countryName} Currency Converter 2026 | ${currencyCode} Exchange Rates`,
-    description: `Convert ${currencyCode} to and from major world currencies using live exchange rates. Free currency converter for ${countryName}.`,
+    title: t("title", { country: countryName, year: 2026 }),
+    description: t("description", { currencyCode: country?.currency ?? "" }),
     alternates: alternateLanguages(`/${locale}/${countryId}/currency`),
   };
 }

@@ -26,10 +26,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, country: countryId } = await params;
   const tc = await getTranslations({ locale, namespace: "country" });
+  const t = await getTranslations({ locale, namespace: "mortgage" });
   const countryName = tc(countryId);
   return {
-    title: `${countryName} Mortgage Calculator 2026 | Monthly Payment & Amortization`,
-    description: `Calculate your mortgage payment in ${countryName}. See monthly payments, total interest, and full amortization schedule. Free, no signup.`,
+    title: t("title", { country: countryName, year: 2026 }),
+    description: t("description"),
     alternates: alternateLanguages(`/${locale}/${countryId}/mortgage`),
   };
 }

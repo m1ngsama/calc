@@ -29,11 +29,9 @@ export async function generateMetadata({
   params: Promise<{ locale: string; country: string }>;
 }): Promise<Metadata> {
   const { locale, country: countryId } = await params;
-  const tc = await getTranslations({ locale, namespace: "country" });
   const tj = await getTranslations({ locale, namespace: `${countryId}.pension` });
-  const countryName = tc(countryId);
   return {
-    title: `${countryName} Pension Calculator 2026 | CalcHub`,
+    title: tj("title", { year: 2026 }),
     description: tj("description"),
     alternates: alternateLanguages(`/${locale}/${countryId}/pension`),
   };

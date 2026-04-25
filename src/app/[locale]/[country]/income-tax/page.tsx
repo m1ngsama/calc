@@ -29,11 +29,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string; country: string }>;
 }): Promise<Metadata> {
   const { locale, country: countryId } = await params;
-  const tc = await getTranslations({ locale, namespace: "country" });
-  const countryName = tc(countryId);
+  const tj = await getTranslations({ locale, namespace: `${countryId}.incomeTax` });
   return {
-    title: `${countryName} Income Tax Calculator 2026 | Free & Accurate | CalcHub`,
-    description: `Calculate your ${countryName} income tax for 2026. Based on official government tax brackets. Free, private, no signup required.`,
+    title: tj("title", { year: 2026 }),
+    description: tj("description"),
     alternates: alternateLanguages(`/${locale}/${countryId}/income-tax`),
   };
 }
